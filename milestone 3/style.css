@@ -145,3 +145,13 @@ ul ul a {
         display: none;
     }
 }
+
+/*---------------------------------------------------
+    TRANSFER FORM
+    -------------------------------------------------*/
+
+#transferForm{
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 25px;
+}
