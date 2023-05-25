@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- include the next 3 lines in every page (website title, bootstrap links and the css file) -->
-    <title>Transfer Bank Abroad</title>
+    <title>View Bills</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -56,7 +56,7 @@
             </p>
           </div>
           <li>
-            <a href="../clientHome/clientHome.html"
+            <a href=".../clientHome/clientHome.html"
               ><i class="fa-solid fa-house" style="margin-right: 15px"></i
               >Home</a
             >
@@ -303,96 +303,74 @@
         <div class="main-content container-fluid">
           <!-- page header -->
           <div class="page-header">
-            <h3>Transfer Abroad</h3>
+            <h3>View Bills</h3>
           </div>
           <!-- page content -->
           <div class="page-content">
             <!-- ****************************************************************************************************************** -->
             <!-- remove the next lines and put your content here -->
-            <form class="row g-3 needs-validation" novalidate id="transferForm">
-              <div class="col-md-4">
-                <label for="validationCustom01" class="form-label"
-                  >Sender Account Number</label
-                >
-                <input
-                  type="number"
-                  class="form-control"
-                  id="validationCustom01"
-                  placeholder="XXXXXXXXXXXX"
-                  required
-                />
-              </div>
-              <div class="col-md-4">
-                <label for="validationCustom02" class="form-label"
-                  >IBAN Number</label
-                >
-                <input
-                  type="number"
-                  class="form-control"
-                  id="validationCustom02"
-                  placeholder="XXXXXXXXXXXX"
-                  required
-                />
-              </div>
-              <div class="col-md-4">
-                <label for="validationCustomUsername" class="form-label"
-                  >Amount</label
-                >
-                <div class="input-group has-validation">
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="validationCustomUsername"
-                    aria-describedby="inputGroupPrepend"
-                    placeholder="Ex: 100000"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <label for="validationCustom03" class="form-label">
-                  Bank Name</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="validationCustom03"
-                  placeholder="Ex: Bank"
-                  required
-                />
-              </div>
-             
-              <div class="col-md-3">
-                <label for="validationCustom05" class="form-label"> Currency</label>
-                <select class="form-select" id="validationCustom04" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option> Egyptian Pound</option>
-                    <option> Dollar</option>
-                    <option> Euro</option>
-                  </select>
-              </div>
-              <div class="col-md-4">
-              <label for="validationCustom01" class="form-label"></label>
-                Purpose of Transfer </label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="validationCustom01"
-                placeholder="EX: Work"
-                required
-              />
-              <div class="col-12">
-                <br>
-                <button
-                  class="btn btn-success"
-                  type="submit"
-                  style="background-color: #850f0f"
-                >
-                  Make Transfer
-                </button>
-              </div>
-            </form>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Due Date</th>
+                  <th scope="col">Account Number</th>
+                  <th scope="col">Reciever Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>30/05/2023</td>
+                  <td>10052324323</td>
+                  <td>NATGAS</td>
+                  <td>Gas</td>
+                  <td>150 LE</td>
+                </tr>
+                <tr>
+                  <td>01/06/2023</td>
+                  <td>10052324323</td>
+                  <td>Cairo Water</td>
+                  <td>Water</td>
+                  <td>490 LE</td>
+                </tr>
+                <tr>
+                  <td>03/06/2023</td>
+                  <td>10052324323</td>
+                  <td>Allianz</td>
+                  <td>Insurance</td>
+                  <td>1030 LE</td>
+                </tr>
+                <tr>
+                  <td>04/06/2023</td>
+                  <td>10052324323</td>
+                  <td>Orange</td>
+                  <td>Telephone</td>
+                  <td>1030 LE</td>
+                </tr>
+                <tr>
+                  <td>08/06/2023</td>
+                  <td>10052324323</td>
+                  <td>Middle Egypt Electricity</td>
+                  <td>Electricity</td>
+                  <td>2450 LE</td>
+                </tr>
+                <tr>
+                  <td>15/06/2023</td>
+                  <td>10052324323</td>
+                  <td>Elgezira</td>
+                  <td>Clubs</td>
+                  <td>3900 LE</td>
+                </tr>
+                <tr>
+                  <td>01/07/2023</td>
+                  <td>10052324323</td>
+                  <td>AUC</td>
+                  <td>Eductaion</td>
+                  <td>350000 LE</td>
+                </tr>
+              </tbody>
+            </table>
             <!-- till here -->
             <!-- ****************************************************************************************************************** -->
           </div>

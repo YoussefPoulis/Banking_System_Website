@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- include the next 3 lines in every page (website title, bootstrap links and the css file) -->
-    <title>Transfer Bank Abroad</title>
+    <title>Add Bill</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -56,7 +56,7 @@
             </p>
           </div>
           <li>
-            <a href="../clientHome/clientHome.html"
+            <a href=".../clientHome/clientHome.html"
               ><i class="fa-solid fa-house" style="margin-right: 15px"></i
               >Home</a
             >
@@ -303,7 +303,7 @@
         <div class="main-content container-fluid">
           <!-- page header -->
           <div class="page-header">
-            <h3>Transfer Abroad</h3>
+            <h3>Adding Bill</h3>
           </div>
           <!-- page content -->
           <div class="page-content">
@@ -311,8 +311,8 @@
             <!-- remove the next lines and put your content here -->
             <form class="row g-3 needs-validation" novalidate id="transferForm">
               <div class="col-md-4">
-                <label for="validationCustom01" class="form-label"
-                  >Sender Account Number</label
+                <label for="validationCustom01" class="form-label"></label>
+                  Account Number</label
                 >
                 <input
                   type="number"
@@ -322,18 +322,18 @@
                   required
                 />
               </div>
+
               <div class="col-md-4">
-                <label for="validationCustom02" class="form-label"
-                  >IBAN Number</label
-                >
-                <input
-                  type="number"
-                  class="form-control"
-                  id="validationCustom02"
-                  placeholder="XXXXXXXXXXXX"
-                  required
-                />
+                <label for="validationCustom02" class="form-label">Type</label>
+                <select class="form-select" id="validationCustom04" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>Gas</option>
+                  <option>Water</option>
+                  <option>Telephone</option>
+                  <option>Electricity</option>
+                </select>
               </div>
+
               <div class="col-md-4">
                 <label for="validationCustomUsername" class="form-label"
                   >Amount</label
@@ -344,52 +344,54 @@
                     class="form-control"
                     id="validationCustomUsername"
                     aria-describedby="inputGroupPrepend"
-                    placeholder="Ex: 100000"
+                    placeholder="Ex: 1000"
                     required
                   />
                 </div>
               </div>
-              <div class="col-md-6">
+
+              <div class="col-md-6" style="width: 33.5%">
                 <label for="validationCustom03" class="form-label">
-                  Bank Name</label
+                  Reciever Name</label
                 >
                 <input
                   type="text"
                   class="form-control"
                   id="validationCustom03"
-                  placeholder="Ex: Bank"
-                  required
+                  placeholder="Ex: Cairo Water"
                 />
               </div>
-             
-              <div class="col-md-3">
-                <label for="validationCustom05" class="form-label"> Currency</label>
+              <div class="col-md-3" style="width: 33.5%">
+                <label for="validationCustom05" class="form-label">
+                  Currency</label
+                >
                 <select class="form-select" id="validationCustom04" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option> Egyptian Pound</option>
-                    <option> Dollar</option>
-                    <option> Euro</option>
-                  </select>
+                  <option selected disabled value="">Choose...</option>
+                  <option>Egyptian Pound</option>
+                  <option>Dollar</option>
+                  <option>Euro</option>
+                </select>
               </div>
-              <div class="col-md-4">
-              <label for="validationCustom01" class="form-label"></label>
-                Purpose of Transfer </label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="validationCustom01"
-                placeholder="EX: Work"
-                required
-              />
+              <div class="col-md-3" style="width: 33.5%">
+                <label for="validationCustom05" class="form-label">
+                  Repeat</label
+                >
+                <select class="form-select" id="validationCustom04" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>Once</option>
+                  <option> Every Month</option>
+                  <option>Every Quarter-Year</option>
+                  <option>Every Year</option>
+                </select>
+              </div>
+
               <div class="col-12">
-                <br>
                 <button
                   class="btn btn-success"
                   type="submit"
                   style="background-color: #850f0f"
                 >
-                  Make Transfer
+                  Add Bill
                 </button>
               </div>
             </form>
