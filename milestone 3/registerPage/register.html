@@ -21,8 +21,8 @@
 	      margin: 5em auto;
 	      display: flex;
          }
-        .company__info{
-	       background-color: #850F0F;
+         .company__info{
+	       background-color: #fff;
 	       border-top-left-radius: 20px;
 	       border-bottom-left-radius: 20px;
 	       display: flex;
@@ -38,7 +38,7 @@
 	    .company__info{
 		display: none;
 	     }
-	    .login_form{
+         .login_form{
 		border-top-left-radius:20px;
 		border-bottom-left-radius:20px;
 	}
@@ -50,14 +50,18 @@
 	color:#850F0F;
 }
 .login_form{
-	background-color: #fff;
-	border-top-right-radius:20px;
-	border-bottom-right-radius:20px;
-	border-top:1px solid #ccc;
-	border-right:1px solid #ccc;
+    background-color: #fff;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-top: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 2em;
 }
 form{
-	padding: 0 2em;
+	padding:0;
 }
 .form__input{
 	width: 100%;
@@ -95,43 +99,55 @@ form{
    </head>
     <body >
         <div class="container-fluid">
-            <div class="row main-content bg-success text-center">
-                <div class="col-md-4 text-center company__info">
-                    <h2><img src="../public/logo.png" alt="InstaBank" height="100px" width="100px"></h2>
-                    <h2 class="company_title">InstaBank</h2>
+            <div class=" main-content bg-success text-center">
+                <div class="col-md-4  company__info">
+                   
                 </div>
-                <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+                <div class="col-md-8 col-xs-12 col-sm-12 login_form text-start">
                     <div class="container-fluid">
                         <div class="row">
-                            <h2>Log In</h2>
+                            <h2>Register</h2>
                         </div>
                         <div class="row">
                             <form control="" class="form-group">
                                 <div class="row">
-                                    <input type="text" name="username" id="username" class="form__input" placeholder="Username">
+                                    <input type="text" name="fullname" id="fullname" class="form__input" placeholder="fullname">
                                 </div>
                                 <div class="row">
-                                    
+                                     <input  type="text" name="username" id="username" class="form__input" placeholder="username">
+                                </div>
+                                <div class="row">
                                     <input  type="password" name="password" id="password" class="form__input" placeholder="Password">
                                 </div>
                                 <div class="row">
-                                    <label>
-                                        <input type="checkbox" id="remember me">
-                                         I agree to the terms and conditions
-                                      </label>
-                                <div class="row">
-                                    <button id="submit" onclick="openPage()" class="btn">Submit</button>
+                                    <input  type="text" name="National ID" id="National ID" class="form__input" placeholder="National ID">
+                               </div>
+                               <div class="row">
+                                <input  type="tel" name="Phone Number" id="Phone Number" class="form__input" placeholder="Phone Number">
+                              </div>
+                              <div class="row">
+                                <input  type="email" name="Email" id="Email" class="form__input" placeholder="Email">
+                              </div>
+                              <div class="row">
+                                <input  type="text" name="Address" id="Address" class="form__input" placeholder="Address">
+                              </div>
+                              <div class="row">
+                                <input  type="datetime" name="Date Birth" id="Date Birth" class="form__input" placeholder="Date Birth">
+                              </div>
+
+                                <div>
+                                    <button id="register" onclick="openPage()" class="btn">Register</button>
                                 </div>
                         </div>
                         <div class="row">
-                            <p>Don't have an account? <a href="#">Register Here</a></p>
+                            <p><a href="#">return to login</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <script>
-   var button = document.getElementById("submit");
+   var button = document.getElementById("register");
    button.addEventListener("keypress", function(event) {
     if (event.keyCode === 13) {
       event.preventDefault();
