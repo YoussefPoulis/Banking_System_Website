@@ -130,15 +130,12 @@ ul ul a {
 .curency {
 margin-top: 20px;
 }
-.submitButton{
-margin-top: 40px;
-margin-left: 90%;
-margin-bottom:40px ;
-color: white;
-background-color: blue;
-border-radius: 20px;
+.type{
+text-align: left;
 }
-
+.eachCard{
+margin-top: 20px;
+}
 
 
 
