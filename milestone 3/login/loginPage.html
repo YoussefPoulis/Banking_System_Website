@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,38 +91,61 @@ form{
 	background-color:#850F0F;
 	color:#fff;
 }
+#notification {
+  display:none;
+  color: red;
+  margin-top: 5px;
+}
+.errorInput{
+    border:1px solid red;
+}
+.errormessage{
+    font-size: 11px;
+    font-weight: bold;
+    color:red;
+    text-align: left;
+    margin:0px;
+    padding:0px;
+    margin-top: 2px;
+}
 
    </style>
+   <script defer src="../scriptLogin.js"></script>
    </head>
     <body >
+        
         <div class="container-fluid">
             <div class="row main-content bg-success text-center">
                 <div class="col-md-4 text-center company__info">
                     <h2><img src="../public/logo.png" alt="InstaBank" height="100px" width="100px"></h2>
                     <h2 class="company_title">InstaBank</h2>
                 </div>
-                <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+                <div class="col-md-8 col-xs-12 col-sm-12 login_form">
                     <div class="container-fluid">
                         <div class="row">
                             <h2>Log In</h2>
                         </div>
                         <div class="row">
-                            <form control="" class="form-group">
+                            <form id="loginForm" class="form-group">
                                 <div class="row">
-                                    <input type="text" name="username" id="username" class="form__input" placeholder="Username">
+                                    <input type="text" name="username" id="username" class="form__input " placeholder="Username"> 
+                                    
                                 </div>
                                 <div class="row">
+                                    <input type="password" name="password" id="password" class="form__input " placeholder="Password">
                                     
-                                    <input  type="password" name="password" id="password" class="form__input" placeholder="Password">
                                 </div>
                                 <div class="row">
                                     <label>
-                                        <input type="checkbox" id="remember me">
-                                         I agree to the terms and conditions
-                                      </label>
-                                <div class="row">
-                                    <button id="submit" onclick="openPage()" class="btn">Submit</button>
+                                        <input type="checkbox" id="checkbox">
+                                        I agree to the terms and conditions
+                                        
+                                    </label>
                                 </div>
+                                <div class="row">
+                                    <button id="submit" onclick ="return myFunc()" class="btn">Submit</button>
+                                </div>
+                            </form>
                         </div>
                         <div class="row">
                             <p>Don't have an account? <a href="#">Register Here</a></p>
@@ -130,22 +154,96 @@ form{
                 </div>
             </div>
         </div>
+    
         <script>
-   var button = document.getElementById("submit");
-   button.addEventListener("keypress", function(event) {
-    if (event.keyCode === 13) {
-      event.preventDefault();
+    function myFunc() {
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  var checkbox = document.getElementById('checkbox').checked;
+  var minLength = 8;
+  var maxLength = 32;
+
+  if (username === "") {
+    var usernameInput = document.getElementById('username');
+    usernameInput.classList.add('errorInput');
+    var errorMessageElement = document.createElement('p');
+    errorMessageElement.classList.add('errormessage');
+    errorMessageElement.innerHTML = "Please fill in the username field";
+    var existingErrorMessage = usernameInput.parentNode.querySelector('.errormessage');
+    if (existingErrorMessage) {
+      existingErrorMessage.remove();
     }
-  });
-  function openPage() {
-    window.open("../clientHome/clientHome.html");
+    usernameInput.parentNode.insertBefore(errorMessageElement, usernameInput.nextSibling);
+    return false;
+  }
+
+  if (password === "") {
+    var usernameInput = document.getElementById('username');
+    var existingErrorMessage = usernameInput.parentNode.querySelector('.errormessage');
+    if (existingErrorMessage) {
+      existingErrorMessage.remove();
+    }
+    var passwordInput = document.getElementById('password');
+    passwordInput.classList.add('errorInput');
+    var errorMessageElement = document.createElement('p');
+    errorMessageElement.classList.add('errormessage');
+    errorMessageElement.innerHTML = "Please fill in the password field";
+    var existingErrorMessage = passwordInput.parentNode.querySelector('.errormessage');
+    if (existingErrorMessage) {
+      existingErrorMessage.remove();
+    }
+    passwordInput.parentNode.insertBefore(errorMessageElement, passwordInput.nextSibling);
+    return false;
+} else {
+    var passwordInput = document.getElementById('password');
+    var existingErrorMessage = passwordInput.parentNode.querySelector('.errormessage');
+    if (existingErrorMessage) {
+      existingErrorMessage.remove();
+    }
   }
   
- 
+
+  if (password.length < minLength || password.length > maxLength) {
+    var passwordInput = document.getElementById('password');
+    passwordInput.classList.add('errorInput');
+    var errorMessageElement = document.createElement('p');
+    errorMessageElement.classList.add('errormessage');
+    errorMessageElement.innerHTML = "Password length should be between 8 and 32 characters";
+    var existingErrorMessage = passwordInput.parentNode.querySelector('.errormessage');
+    if (existingErrorMessage) {
+      existingErrorMessage.remove();
+    }
+    passwordInput.parentNode.insertBefore(errorMessageElement, passwordInput.nextSibling);
+    return false;
+  }
+  if (!checkbox) { // Check if the checkbox is not checked
+    var checkboxInput = document.getElementById('checkbox');
+    var passwordInput = document.getElementById('password');
+    var existingErrorMessage = passwordInput.parentNode.querySelector('.errormessage');
+    if (existingErrorMessage) {
+      existingErrorMessage.remove();
+    }
+    var errorMessageElement = document.createElement('p');
+    errorMessageElement.classList.add('errormessage');
+    errorMessageElement.innerHTML = "You cannot login without agreeing to the terms and conditions";
+    var existingErrorMessage1 = checkboxInput.parentNode.querySelector('.errormessage');
+    if (existingErrorMessage1) {
+      existingErrorMessage1.remove();
+    }
+    checkboxInput.parentNode.insertBefore(errorMessageElement, checkboxInput.nextSibling);
+    return false;
+  }
+
+  window.open("../clientHome/clientHome.html");
+  return true;
+}
+   
+           
         </script>
+        
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="../script.js"></script>
+    <script src="../scriptLogin.js"></script>
     </body>
 </html>
