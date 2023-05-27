@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="../assets/js/registerPage.js"></script>
    <style>
     body{
         background-color: #EBE7Df;
     }
         .main-content{
-	      width: 50%;
+	      width: 40%;
 	      border-radius: 20px;
 	      box-shadow: 0 5px 5px rgba(0,0,0,.4);
 	      margin: 5em auto;
@@ -57,111 +58,122 @@
             border-right: 1px solid #ccc;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+           align-items: flex-start;
             padding: 2em;
 }
 form{
 	padding:0;
 }
 .form__input{
-	width: 100%;
+	width: 80%;
 	border:0px solid transparent;
 	border-radius: 0;
 	border-bottom: 1px solid #aaa;
-	padding: 1em .5em .5em;
-	padding-left: 2em;
+	padding: 1em .4em .5em;
+	padding-left: -1em;
 	outline:none;
-	margin:1.5em auto;
-	transition: all .5s ease;
+	margin: 1em auto;
+	transition: all .10s ease;
+    
+    
 }
 .form__input:focus{
 	border-bottom-color: #850F0F;
-	box-shadow: 0 0 5px rgba(0,80,80,.4); 
+	box-shadow: 0 0 5px  #850F0F; 
 	border-radius: 4px;
 }
 .btn{
 	transition: all .5s ease;
-	width: 70%;
+	width: 30%;
 	border-radius: 30px;
 	color:#850F0F;
 	font-weight: 600;
 	background-color: #fff;
 	border: 1px solid #850F0F;
-	margin-top: 1.5em;
-	margin-bottom: 1em;
+	/*margin-top: 1.5em;
+	margin-bottom: 1em;*/
 }
 .btn:hover, .btn:focus{
 	background-color:#850F0F;
 	color:#fff;
 }
+.errorInput{
+            border:1px solid red;
+        }
+.errormessage{
+            font-size: 11px;
+            font-weight: bold;
+            color:red;
+           
+            margin:0px;
+            padding:0px;
+            margin-top: 2px;
+        }
+
 
    </style>
    </head>
     <body >
         <div class="container-fluid">
-            <div class=" main-content bg-success text-center">
-                <div class="col-md-4  company__info">
-                   
+            <img id="sound-input" style="display: none" width="70" src="https://media3.giphy.com/media/YzgvFJN9XBDBVkXsny/giphy.gif?cid=6c09b9521hniorc9tdo0wbds32xvqmpzpz80435x4m77cqmq&ep=v1_stickers_related&rid=giphy.gif&ct=s">
+            <div class=" main-content bg-success ">
+                <div class="col-md-1  company__info">
                 </div>
-                <div class="col-md-8 col-xs-12 col-sm-12 login_form text-start">
+                <div class="col-md-12 col-xs-12 col-sm-12 login_form text-center">
                     <div class="container-fluid">
                         <div class="row">
-                            <h2>Register</h2>
+                            <h2 onmouseenter="sayWords('Register')" onmouseout="stopTextToSpeech()">Register</h2>
                         </div>
                         <div class="row">
-                            <form control="" class="form-group">
+                            <form control="" class="form-group" onsubmit="handleSubmit(event)" onmouseout="stopTextToSpeech()">
                                 <div class="row">
-                                    <input type="text" name="fullname" id="fullname" class="form__input" placeholder="fullname">
+                                    <input type="text" name="fullname" id="fullname" class="form__input" placeholder="Fullname"  onmouseenter="sayWords('fullname field')" onmouseout="stopTextToSpeech()">
                                 </div>
                                 <div class="row">
-                                     <input  type="text" name="username" id="username" class="form__input" placeholder="username">
+                                     <input  type="text" name="username" id="username" class="form__input" placeholder="Username" onmouseenter="sayWords('username field')" onmouseout="stopTextToSpeech()">
                                 </div>
                                 <div class="row">
-                                    <input  type="password" name="password" id="password" class="form__input" placeholder="Password">
+                                    <input  type="password" name="password" id="password" class="form__input" placeholder="Password"  onmouseenter="sayWords('password field')" onmouseout="stopTextToSpeech()">
                                 </div>
                                 <div class="row">
-                                    <input  type="text" name="National ID" id="National ID" class="form__input" placeholder="National ID">
+                                    <input  type="text" name="nationalID" id="nationalID" class="form__input" placeholder="National ID"  onmouseenter="sayWords('National ID field')" onmouseout="stopTextToSpeech()">
                                </div>
                                <div class="row">
-                                <input  type="tel" name="Phone Number" id="Phone Number" class="form__input" placeholder="Phone Number">
+                                <input  type="tel" name="phoneNumber" id="phoneNumber" class="form__input" placeholder="Phone Number" onmouseenter="sayWords('Phone Number field')" onmouseout="stopTextToSpeech()">
                               </div>
                               <div class="row">
-                                <input  type="email" name="Email" id="Email" class="form__input" placeholder="Email">
+                                <input  type="email" name="email" id="email" class="form__input" placeholder="Email" onmouseenter="sayWords('Email field')" onmouseout="stopTextToSpeech()">
                               </div>
                               <div class="row">
-                                <input  type="text" name="Address" id="Address" class="form__input" placeholder="Address">
+                                <input  type="text" name="address" id="address" class="form__input" placeholder="Address" onmouseenter="sayWords('Address field')" onmouseout="stopTextToSpeech()">
                               </div>
                               <div class="row">
-                                <input  type="datetime" name="Date Birth" id="Date Birth" class="form__input" placeholder="Date Birth">
+                                <input  type="date" name="dateBirth" id="dateBirth" class="form__input" placeholder="Date Birth" onmouseenter="sayWords('Date Birth field')" onmouseout="stopTextToSpeech()">
                               </div>
-
-                                <div>
-                                    <button id="register" onclick="openPage()" class="btn">Register</button>
+                              <div class="row">
+                                <label onmouseenter="sayWords('I agree to the terms and conditions')" onmouseout="stopTextToSpeech()" >
+                                <input type="checkbox" id="checkbox" > I agree to the terms and conditions
+                            </div>
+                            <div class="row-2">
+                            </div>
+                             <div>
+                                    <input type="submit" value="Register" id="submit" class="btn" style="margin: auto" onmouseenter="sayWords('Register button')" onmouseout="stopTextToSpeech()">
                                 </div>
+                              </form>  
                         </div>
                         <div class="row">
-                            <p><a href="#">return to login</a></p>
+                            <p><a href="#" onmouseenter="sayWords('Return to Home Page')" onmouseout="stopTextToSpeech()">Return to Home Page</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <script>
-   var button = document.getElementById("register");
-   button.addEventListener("keypress", function(event) {
-    if (event.keyCode === 13) {
-      event.preventDefault();
-    }
-  });
-  function openPage() {
-    window.open("../clientHome/clientHome.html");
-  }
-  
- 
+            
         </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="../script.js"></script>
+    <script src="../scriptRegister.js"></script>
     </body>
 </html>
