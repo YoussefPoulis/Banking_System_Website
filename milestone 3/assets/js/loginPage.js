@@ -128,6 +128,8 @@ function myregister() {
     return true;
 }
 
+
+
 if (localStorage.getItem('isBlind')) {
     speechToText();
 }
@@ -137,22 +139,16 @@ function sayWords(msgText) {
     if (!localStorage.getItem('isBlind')) {
         return;
     }
-    // Check if the browser supports the SpeechSynthesis API
     if ('speechSynthesis' in window) {
-        // Create a new instance of SpeechSynthesisUtterance
         var msg = new SpeechSynthesisUtterance();
-        // Set the text that you want to be spoken
         msg.text = msgText;
-
-        // Speak the text using the default speech synthesis engine
         speechSynthesis.speak(msg);
     }
 }
 
 function stopTextToSpeech() {
-    // Check if the browser supports the SpeechSynthesis API
     if ('speechSynthesis' in window) {
-        // Cancel any existing speech synthesis
+        
         if (speechSynthesis.speaking || speechSynthesis.pending) {
         speechSynthesis.cancel();
         }
@@ -181,8 +177,8 @@ function speechToText() {
 
 
             // Regular expressions to match username and password patterns
-            var usernameRegex = /(?:my\s)?username\s(?:is|should\sbe)?\s(\w+)/i;
-            var passwordRegex = /(?:my\s)?password\s(?:is|should\sbe)?\s(\w+)/i;
+            var usernameRegex = /(?:my\s)?username\s(?:is|should\sbe)?\s([\w\s]+)/i;
+            var passwordRegex = /(?:my\s)?password\s(?:is|should\sbe)?\s([\w\s]+)/i;
 
 
             // Extract username and password using regular expressions
