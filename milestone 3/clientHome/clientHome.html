@@ -25,7 +25,6 @@
     display: block;
 }
 #notificationsPopover {
-    z-index: 999;
     min-width: 250px; 
     max-width: 250px;
     background: #fff;
@@ -39,6 +38,32 @@
     padding: 1%;
     top: 3.5em;
     }
+#remindersPopover{
+    min-width: 250px; 
+    max-width: 250px;
+    background: #fff;
+    color: #000;
+    transition: all 0.3s;
+    min-height:250px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+    left:-5em;
+    padding: 1%;
+    top: 3.5em;
+    }
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.0em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+.popover-wrapper {
+  position: relative;
+  z-index: 1;
+}
+    
     </style>
 </head>
 <body>
@@ -138,27 +163,40 @@
                     </button>
                 </div>
                 <div class="navbar navbar-expand">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="m-3"  ><a href="#"><i class="fa-regular fa-calendar-days fa-xl" style="color:#fff"></i></a></li>
-                        
-                        <li class="m-3" onclick="togglePopover()" > <a href="#" id="notificationsButton"><i class="fa-regular fa-bell fa-xl" style="color:#fff"></i></a>  
+                    <ul class="navbar-nav mr-auto popover-wrapper" >
+                        <li class="m-3" onclick="togglePopoverreminderes()" ><a href="#" id="reminderButton"><i class="fa-regular fa-calendar-days fa-xl" style="color:#fff"></i></a>
+                            <div  id="remindersPopover" class=" popover-content card  "  >
+                                <div class="card-body" >
+                                     <h3 style="color:#850F0F"  class="card-title text-center">Reminders</h3>
+                                     <p></p> 
+                                     <h5> Date: October 8, 2019</h5>
+                                     <p>  Bill Reminder: Your electricity bill payment of $150 is due on June 10th, 2019. Please ensure timely payment to avoid any late fees.</p>
+                                     <a href="#" class="card-link" style="color:#850F0F"> Dismiss</a>
+                                    <P></p>
+                                        <h5> Date: november 15, 2020</h5>
+                                        <p>  Transfer $200 to George account today.</p>
+                                        <a href="#" class="card-link" style="color:#850F0F"> Dismiss</a>
+                                    
+                              
+                            </div>
+                        </div>
+                        </li>
+                        <li class="m-3" onclick="togglePopovernotification()" > <a href="#" id="notificationsButton"><i class="fa-regular fa-bell fa-xl" style="color:#fff"></i></a> 
                             
                             <div  id="notificationsPopover" class=" popover-content card  " >
                                 <div class="card-body" >
-                                     <h5 class="card-title"> Date: May 5, 2018</h5>
+                                     <h3 style="color:#850F0F" class="card-title text-center">Notifications</h3>
+                                     <p></p> 
+                                        <h5> Date: May 5, 2018</h5>
                                      <p>  Your contact information has been successfully updated</p>
                                      <a href="#" class="card-link" style="color:#850F0F"> Dismiss</a>
                                     <p></p>
                                     <h5 class="card-title"> Date: May 27, 2023</h5>
                                     <p> A fund transfer of $500 to youhanna has been successfully completed.</p>
                                     <a href="#" class="card-link" style="color:#850F0F"> Dismiss</a>
-                           
-                                
-                               
                             </div>
                         </div>
                                  </li>
-                        
                         <li class="m-3"><a href="#"><i class="fa-solid fa-gear fa-xl" style="color:#fff"></i></a></li>
                     </ul>
                 </div>
@@ -209,10 +247,29 @@
     </div>
     <!-- include these links in all pages -->
    <script>
-    function togglePopover() {
-  var popover = document.getElementById('notificationsPopover');
-  popover.style.display = (popover.style.display === 'block') ? 'none' : 'block';
-}
+function togglePopoverreminderes() {
+      var remindersPopover = document.getElementById("remindersPopover");
+      var notificationsPopover = document.getElementById("notificationsPopover");
+
+      if (remindersPopover.style.display === "block") {
+        remindersPopover.style.display = "none";
+      } else {
+        remindersPopover.style.display = "block";
+        notificationsPopover.style.display = "none"; // Close notifications popover
+      }
+    }
+
+    function togglePopovernotification() {
+      var remindersPopover = document.getElementById("remindersPopover");
+      var notificationsPopover = document.getElementById("notificationsPopover");
+
+      if (notificationsPopover.style.display === "block") {
+        notificationsPopover.style.display = "none";
+      } else {
+        notificationsPopover.style.display = "block";
+        remindersPopover.style.display = "none"; // Close reminders popover
+      }
+    }
    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
