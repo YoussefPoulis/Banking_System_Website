@@ -26,6 +26,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../style.css" />
+    <script src="../Transfers/transfers.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -317,7 +318,7 @@
                 <input
                   type="number"
                   class="form-control"
-                  id="validationCustom01"
+                  id="senderAccountNumber"
                   placeholder="XXXXXXXXXXXX"
                   required
                 />
@@ -331,7 +332,7 @@
                 <input
                   type="number"
                   class="form-control"
-                  id="validationCustom02"
+                  id="recieverAccountNumber"
                   placeholder="XXXXXXXXXXXX"
                   required
                 />
@@ -344,7 +345,7 @@
                   <input
                     type="number"
                     class="form-control"
-                    id="validationCustomUsername"
+                    id="amount"
                     aria-describedby="inputGroupPrepend"
                     placeholder="Ex: 100000"
                     required
@@ -358,7 +359,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="validationCustom03"
+                  id="recieverName"
                   placeholder="Ex: Mohamed Ramadan"
                   required
                 />
@@ -391,7 +392,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="validationCustom01"
+                id="bankName"
                 placeholder="EX: Bank"
                 required
               />
@@ -402,7 +403,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="validationCustom01"
+                id="purpose"
                 placeholder="EX: Work"
                 required
               />
@@ -410,6 +411,7 @@
               <div class="col-12">
                 <br>
                 <button
+                onclick="myFunc2()"
                   class="btn btn-success"
                   type="submit"
                   style="background-color: #850f0f"

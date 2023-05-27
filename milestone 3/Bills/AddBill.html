@@ -26,6 +26,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../style.css" />
+    <script src="../Transfers/transfers.js"></script>
+
   </head>
   <body>
     <div class="wrapper">
@@ -317,7 +319,7 @@
                 <input
                   type="number"
                   class="form-control"
-                  id="validationCustom01"
+                  id="accountNumber"
                   placeholder="XXXXXXXXXXXX"
                   required
                 />
@@ -342,7 +344,7 @@
                   <input
                     type="number"
                     class="form-control"
-                    id="validationCustomUsername"
+                    id="amount"
                     aria-describedby="inputGroupPrepend"
                     placeholder="Ex: 1000"
                     required
@@ -357,7 +359,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="validationCustom03"
+                  id="recieverName"
                   placeholder="Ex: Cairo Water"
                 />
               </div>
@@ -387,6 +389,7 @@
 
               <div class="col-12">
                 <button
+                onclick="myFunc4()"
                   class="btn btn-success"
                   type="submit"
                   style="background-color: #850f0f"
