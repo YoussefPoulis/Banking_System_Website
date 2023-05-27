@@ -25,7 +25,7 @@
             <ul class="list-unstyled components">
                 <div class="containder-fluid text-center">
                     <img class="m-2" src="../public/profile.png" alt="" height="80px" width="80px">
-                    <h5 style="font-size: 15x;">Nada Labib</h5>
+                    <h5 style="font-size: 15x;">Nada Ibrahim</h5>
                     <p style="font-size: 13px; margin-top: -10px; margin-bottom: 25px;">nada@gmail.com</p>
                 </div>
                 <li>
@@ -121,7 +121,7 @@
             <div class="main-content container-fluid">
                 <!-- page header -->
                 <div class="page-header">
-                    <h3>Accounts Summary</h3>
+                    <h3>Welcome Back, Nada</h3>
                 </div>
                 <!-- page content -->
                 <div class="page-content">
@@ -132,27 +132,55 @@
                             <div class="card m-4 flex-fill" style="width: 18rem;">
                                 <div class="card-body">
                                   <h5 class="card-title">Current Account</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted">Account Num. 10052324323</h6>
-                                  <p class="card-text">$ 25,000,000 </p>
-                                  <a href="#" class="card-link"> View Transactions</a>
+                                  <h6 class="card-subtitle mb-2 text-muted">Account Number: 10052324323</h6>
+                                  <h2 class="mt-3 card-text text-muted">$10,000</h2>
+                                  <a href="#" class="mt-3 btn themed-btn-outlined"> View Transactions</a>
                                 </div>
                               </div>
                               <div class="card m-4 flex-fill" style="width: 18rem;">
                                 <div class="card-body">
                                   <h5 class="card-title">Savings Account</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted">Account Num. 10005004323</h6>
-                                  <p class="card-text">$ 120 </p>
-                                  <a href="#" class="card-link">View Transactions</a>
+                                  <h6 class="card-subtitle mb-2 text-muted">Account Number: 10005004323</h6>
+                                  <h2 class="mt-3 card-text text-muted">$60,000 </h2>
+                                  <a href="#" class="mt-3 btn themed-btn-outlined">View Transactions</a>
                                 </div>
                               </div>
                               <div class="card m-4 flex-fill" style="width: 18rem;">
                                 <div class="card-body">
                                   <h5 class="card-title">Deposite Account</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted">Account Num. 0112345678</h6>
-                                  <p class="card-text"> $ 1,000,000,000</p>
-                                  <a href="#" class="card-link">View Transactions</a>
+                                  <h6 class="card-subtitle mb-2 text-muted">Account Number: 01023456780</h6>
+                                  <h2 class="mt-3 card-text text-muted"> $55,000</h2>
+                                  <a href="#" class="mt-3 btn themed-btn-outlined">View Transactions</a>
                                 </div>
                               </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="col-12 d-flex flex-row">
+                                    <div class="card mt-4 mb-4 flex-fill" style="width: 18rem;">
+                                        <div class="card-header text-center" style="background-color: #850F0F; color: #fff;">
+                                            Accounts Summary
+                                        </div>
+                                        <div class="card-body">
+                                            <canvas id="myChart" style="width:100%;"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="col-12 d-flex flex-row">
+                                    <div class="card mt-4 mb-4 flex-fill" style="width: 18rem;">
+                                        <div class="card-header text-center" style="background-color: #850F0F; color: #fff;">
+                                            Announcements
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><strong>New Branch: </strong>We are delighted to open a new branch in Maadi. This branch will provide convenient banking services to the local community and support economic growth in the area.</li>
+                                            <li class="list-group-item"><strong>New credit card: </strong>We are pleased to announce the launch of our latest "Platinum" credit card, offering enhanced rewards and exclusive benefits for our valued customers.</li>
+                                            <li class="list-group-item"><strong>Security Enhancements: </strong>We have implemented advanced security measures to protect our customers' financial information and ensure the highest level of data privacy.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- till here -->
@@ -165,6 +193,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="../script.js"></script>
+    <script src="./clientHome.js"></script>
+    
 </body>
 </html>

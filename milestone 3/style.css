@@ -128,6 +128,16 @@ ul ul a {
 
 }
 
+.themed-btn-outlined {
+    color: #850F0F;
+    border: #850F0F solid;
+}
+
+.themed-btn-outlined:hover {
+    color: #fff;
+    background-color: #850F0F;
+}
+
 
 
 /* ---------------------------------------------------
