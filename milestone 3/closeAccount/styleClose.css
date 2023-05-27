@@ -114,7 +114,7 @@ ul ul a {
 
 .main-content{
     width: 90%;
-    margin-top: 3rem;
+    margin-top: 7rem;
     padding: 0 1.5rem;
     /* background-color: pink; */
 }
@@ -127,15 +127,14 @@ ul ul a {
 .page-content {
 
 }
-
-.themed-btn-outlined {
-    color: #850F0F;
-    border: #850F0F solid;
+.curency {
+margin-top: 20px;
 }
-
-.themed-btn-outlined:hover {
-    color: #fff;
-    background-color: #850F0F;
+.type{
+text-align: left;
+}
+.eachCard{
+margin-top: 20px;
 }
 
 
@@ -154,24 +153,4 @@ ul ul a {
     #sidebarCollapse span {
         display: none;
     }
-}
-
-/*---------------------------------------------------
-    TRANSFER FORM
-    -------------------------------------------------*/
-
-#transferForm{
-    background-color: white;
-    border-radius: 5px;
-    padding-bottom: 25px;
-}
-
-table{
-    background-color: white;
-    border-radius: 5px;
-    border-bottom: 1px solid #850F0F;
-}
-tr:hover{
-    background-color: wheat;
-    
 }

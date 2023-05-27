@@ -25,7 +25,8 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./styleOpen.css" />
+    <script src="./scriptOpen.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -299,48 +300,91 @@
             </ul>
           </div>
         </div>
-        <!-- main content -->
+        <!-- main content************************************************* -->
         <div class="main-content container-fluid">
           <!-- page header -->
           <div class="page-header">
-            <h3>Accounts Summary</h3>
+            <h3>Open New Acount</h3>
           </div>
-          <!-- page content -->
           <div class="page-content">
-            <!-- ****************************************************************************************************************** -->
-            <!-- remove the next lines and put your content here -->
-            <div class="col-12">
-              <div class="col-12 row d-flex flex-row">
-                <div class="card m-4 flex-fill" style="width: 18rem">
-                  <div class="card-body">
-                    <h5 class="card-title">Current Account</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">
-                      Account Num. 10052324323
-                    </h6>
-                    <p class="card-text">$ 25,000,000</p>
-                    <a href="#" class="card-link"> View Transactions</a>
-                  </div>
-                </div>
-                <div class="card m-4 flex-fill" style="width: 18rem">
-                  <div class="card-body">
-                    <h5 class="card-title">Savings Account</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">
-                      Account Num. 10005004323
-                    </h6>
-                    <p class="card-text">$ 120</p>
-                    <a href="#" class="card-link">View Transactions</a>
-                  </div>
-                </div>
-                <div class="card m-4 flex-fill" style="width: 18rem">
-                  <div class="card-body">
-                    <h5 class="card-title">Deposite Account</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">
-                      Account Num. 0112345678
-                    </h6>
-                    <p class="card-text">$ 1,000,000,000</p>
-                    <a href="#" class="card-link">View Transactions</a>
-                  </div>
-                </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label"
+                >Full Name</label
+              >
+              <input type="text" class="form-control" id="Full"
+              placeholder="Ex:Amr Diab" required=>
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label"
+                >Email</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="Email"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label"
+                >password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Ex: Itsasecret"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label"
+                >country</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="country"
+                placeholder="Ex: Egypt"
+                required
+              />
+            </div>
+            <div>
+              <label for="formGroupExampleInput2" class="form-label"
+                >Account Type</label
+              >
+              <select class="form-select" aria-label="Default select example">
+                <option selected disabled value="">Choose...</option>
+                <option value="1">Saving</option>
+                <option value="2">Salary</option>
+              </select>
+            </div>
+            <div class="curency">
+              <label for="formGroupExampleInput2" class="form-label"
+                >Curency</label
+              >
+              <select class="form-select" aria-label="Default select example">
+                <option selected disabled value="">Choose...</option>
+                <option value="1">Dollar</option>
+                <option value="2">Euro</option>
+                <option value="3">Sterling</option>
+                <option value="4">Egyptian Pound</option>
+                <option value="5">Yen</option>
+                <option value="6">Franc</option>
+              </select>
+              <div class="col-12">
+                <br />
+                <br />
+
+                <button
+                  onclick="myFunc()"
+                  class="btn btn-success"
+                  type="submit"
+                  style="background-color: #850f0f; margin-bottom: 90px"
+                >
+                  Submit
+                </button>
               </div>
             </div>
             <!-- till here -->
@@ -366,7 +410,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="../script.js"></script>
-    <script src="./clientHome.js"></script>
-    
-</body>
+  </body>
 </html>
