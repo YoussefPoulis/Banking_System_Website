@@ -145,3 +145,23 @@ ul ul a {
         display: none;
     }
 }
+
+/*---------------------------------------------------
+    TRANSFER FORM
+    -------------------------------------------------*/
+
+#transferForm{
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 25px;
+}
+
+table{
+    background-color: white;
+    border-radius: 5px;
+    border-bottom: 1px solid #850F0F;
+}
+tr:hover{
+    background-color: wheat;
+    
+}
