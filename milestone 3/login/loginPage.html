@@ -1,249 +1,195 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- include the next 3 lines in every page (website title, bootstrap links and the css file) -->
-    <title>Bank</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-   <style>
-    body{
-        background-color: #EBE7Df;
-    }
-        .main-content{
-	      width: 50%;
-	      border-radius: 20px;
-	      box-shadow: 0 5px 5px rgba(0,0,0,.4);
-	      margin: 5em auto;
-	      display: flex;
-         }
-        .company__info{
-	       background-color: #850F0F;
-	       border-top-left-radius: 20px;
-	       border-bottom-left-radius: 20px;
-	       display: flex;
-	       flex-direction: column;
-	       justify-content: center;
-	       color: #EBE7Df;
-         }
-        .fa-android{
-     	   font-size:3em;
-         }
-         @media screen and (max-width: 640px) {
-     	.main-content{width: 90%;}
-	    .company__info{
-		display: none;
-	     }
-	    .login_form{
-		border-top-left-radius:20px;
-		border-bottom-left-radius:20px;
-	}
-         }
-@media screen and (min-width: 642px) and (max-width:800px){
-	.main-content{width: 70%;}
-}
-.row > h2{
-	color:#850F0F;
-}
-.login_form{
-	background-color: #fff;
-	border-top-right-radius:20px;
-	border-bottom-right-radius:20px;
-	border-top:1px solid #ccc;
-	border-right:1px solid #ccc;
-}
-form{
-	padding: 0 2em;
-}
-.form__input{
-	width: 100%;
-	border:0px solid transparent;
-	border-radius: 0;
-	border-bottom: 1px solid #aaa;
-	padding: 1em .5em .5em;
-	padding-left: 2em;
-	outline:none;
-	margin:1.5em auto;
-	transition: all .5s ease;
-}
-.form__input:focus{
-	border-bottom-color: #850F0F;
-	box-shadow: 0 0 5px rgba(0,80,80,.4); 
-	border-radius: 4px;
-}
-.btn{
-	transition: all .5s ease;
-	width: 70%;
-	border-radius: 30px;
-	color:#850F0F;
-	font-weight: 600;
-	background-color: #fff;
-	border: 1px solid #850F0F;
-	margin-top: 1.5em;
-	margin-bottom: 1em;
-}
-.btn:hover, .btn:focus{
-	background-color:#850F0F;
-	color:#fff;
-}
-#notification {
-  display:none;
-  color: red;
-  margin-top: 5px;
-}
-.errorInput{
-    border:1px solid red;
-}
-.errormessage{
-    font-size: 11px;
-    font-weight: bold;
-    color:red;
-    text-align: left;
-    margin:0px;
-    padding:0px;
-    margin-top: 2px;
-}
+            <!-- include the next 3 lines in every page (website title, bootstrap links and the css file) -->
+            <title>Bank</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+            <script src="../assets/js/loginPage.js"></script>
+        <style>
+            body{
+                background-color: #EBE7Df;
+            }
+                .main-content{
+                width: 50%;
+                border-radius: 20px;
+                box-shadow: 0 5px 5px rgba(0,0,0,.4);
+                margin: 5em auto;
+                display: flex;
+                }
+                .company__info{
+                background-color: #850F0F;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: #EBE7Df;
+                }
+                .fa-android{
+                font-size:3em;
+                }
+                @media screen and (max-width: 640px) {
+                .main-content{width: 90%;}
+                .company__info{
+                display: none;
+                }
+                .login_form{
+                border-top-left-radius:20px;
+                border-bottom-left-radius:20px;
+            }
+                }
+        @media screen and (min-width: 642px) and (max-width:800px){
+            .main-content{width: 70%;}
+        }
+        .row > h2{
+            color:#850F0F;
+        }
+        #loginForm .row {
+            margin: 5px;
+        }
+        .login_form{
+            background-color: #fff;
+            border-top-right-radius:20px;
+            border-bottom-right-radius:20px;
+            border-top:1px solid #ccc;
+            border-right:1px solid #ccc;
+        }
+        form{
+            padding: 0 2em;
+        }
+        .form__input{
+            width: 100%;
+            border:0px solid transparent;
+            border-radius: 0;
+            border-bottom: 1px solid #aaa;
+            padding: 1em .5em .5em;
+            padding-left: 2em;
+            outline:none;
+            margin:1.5em auto;
+            transition: all .5s ease;
+        }
+        .form__input:focus{
+            border-bottom-color: #850F0F;
+            box-shadow: 0 0 5px rgba(0,80,80,.4); 
+            border-radius: 4px;
+        }
+        .btn{
+            transition: all .5s ease;
+            width: 100%;
+            border-radius: 30px;
+            color:#850F0F;
+            font-weight: 600;
+            background-color: #fff;
+            border: 1px solid #850F0F;
+            /* margin-top: 1.5em;
+            margin-bottom: 1em; */
+        }
+         /* .isblind {
+            transition: all .5s ease;
+            width: 30%;
+            border-radius: 30px;
+            color:#850F0F;
+            font-weight: 600;
+            background-color: #fff;
+            border: 1px solid #850F0F;
+            margin-top: 1.5em;
+            margin-bottom: 1em;
+            margin-right: 5em;
+        }  */
+        .btn:hover, .btn:focus{
+            background-color:#850F0F;
+            color:#fff;
+        }
+        #notification {
+        display:none;
+        color: red;
+        margin-top: 5px;
+        }
+        .errorInput{
+            border:1px solid red;
+        }
+        .errormessage{
+            font-size: 11px;
+            font-weight: bold;
+            color:red;
+            text-align: left;
+            margin:0px;
+            padding:0px;
+            margin-top: 2px;
+        }
 
-   </style>
-   <script defer src="../scriptLogin.js"></script>
-   </head>
-    <body >
-        
-        <div class="container-fluid">
-            <div class="row main-content bg-success text-center">
-                <div class="col-md-4 text-center company__info">
-                    <h2><img src="../public/logo.png" alt="InstaBank" height="100px" width="100px"></h2>
-                    <h2 class="company_title">InstaBank</h2>
-                </div>
-                <div class="col-md-8 col-xs-12 col-sm-12 login_form">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <h2>Log In</h2>
+        </style>
+        <!-- <script defer src="../scriptLogin.js"></script> -->
+        </head>
+            <body >
+                
+                <div class="container-fluid" style="text-align: center;">
+                    <img id="sound-input" style="display: none" width="70" src="https://media3.giphy.com/media/YzgvFJN9XBDBVkXsny/giphy.gif?cid=6c09b9521hniorc9tdo0wbds32xvqmpzpz80435x4m77cqmq&ep=v1_stickers_related&rid=giphy.gif&ct=s">
+                    <div class="row main-content bg-success text-center">
+                        <div class="col-md-4 text-center company__info">
+                            <h2><img src="../public/logo.png" alt="InstaBank" height="100px" width="100px"></h2>
+                            <h2 class="company_title" onmouseenter="sayWords('InstaBank')" onmouseout="stopTextToSpeech()">InstaBank </h2>
                         </div>
-                        <div class="row">
-                            <form id="loginForm" class="form-group">
+                        <div class="col-md-8 col-xs-12 col-sm-12 login_form">
+                            <div class="container-fluid">
                                 <div class="row">
-                                    <input type="text" name="username" id="username" class="form__input " placeholder="Username"> 
-                                    
+                                    <h2 onmouseenter="sayWords('Login')" onmouseout="stopTextToSpeech()">Log In</h2>
                                 </div>
                                 <div class="row">
-                                    <input type="password" name="password" id="password" class="form__input " placeholder="Password">
-                                    
+                                    <form id="loginForm" class="form-group" onsubmit="handleSubmit(event)"; onmouseout="stopTextToSpeech()">
+                                        <div class="row">
+                                            <input type="text" name="username" id="username" class="form__input " placeholder="Username" onmouseenter="sayWords('username field')" ;onmouseout="stopTextToSpeech()"> 
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <input type="password" name="password" id="password" class="form__input " placeholder="Password" onmouseenter="sayWords('password field')" ;onmouseout="stopTextToSpeech()">
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <label>
+                                                <input type="checkbox" id="checkbox">
+                                                I agree to the terms and conditions
+                                                
+                                            </label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2"></div>
+                                            <div class="col-8">
+                                                <input type="submit" value="Login" id="submit" class="btn" style="margin: auto" onmouseenter="sayWords('login button')" onmouseout="stopTextToSpeech()">
+                                            </div>
+                                            <div class="col-2"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2"></div>
+                                            <div class="col-4">
+                                                <button onclick="localStorage.setItem('isBlind', 'true'); event.preventDefault(); speechToText();" class="btn"  onmouseenter="sayWords('I am blind')" onmouseout="stopTextToSpeech()"> I'm blind </button>
+                                            </div>
+                                            <div class="col-4">
+                                                <button onclick="localStorage.removeItem('isBlind');event.preventDefault();" class="btn" ; onmouseenter="sayWords('I am not blind button')" onmouseout="stopTextToSpeech()">I'm not blind</button>
+                                            </div>
+                                            <div class="col-2"></div>
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="row">
-                                    <label>
-                                        <input type="checkbox" id="checkbox">
-                                        I agree to the terms and conditions
-                                        
-                                    </label>
+                                    <p onmouseenter="sayWords('>Dont have an account?')";onmouseout="stopTextToSpeech()">Don't have an account? <a href="#" onclick="return myregister()"  onmouseenter="sayWords('Register here')" onmouseout="stopTextToSpeech()">Register Here</a></p>
                                 </div>
-                                <div class="row">
-                                    <button id="submit" onclick ="return myFunc()" class="btn">Submit</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="row">
-                            <p>Don't have an account? <a href="#">Register Here</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    
-        <script>
-    function myFunc() {
-  var username = document.getElementById('username').value;
-  var password = document.getElementById('password').value;
-  var checkbox = document.getElementById('checkbox').checked;
-  var minLength = 8;
-  var maxLength = 32;
-
-  if (username === "") {
-    var usernameInput = document.getElementById('username');
-    usernameInput.classList.add('errorInput');
-    var errorMessageElement = document.createElement('p');
-    errorMessageElement.classList.add('errormessage');
-    errorMessageElement.innerHTML = "Please fill in the username field";
-    var existingErrorMessage = usernameInput.parentNode.querySelector('.errormessage');
-    if (existingErrorMessage) {
-      existingErrorMessage.remove();
-    }
-    usernameInput.parentNode.insertBefore(errorMessageElement, usernameInput.nextSibling);
-    return false;
-  }
-
-  if (password === "") {
-    var usernameInput = document.getElementById('username');
-    var existingErrorMessage = usernameInput.parentNode.querySelector('.errormessage');
-    if (existingErrorMessage) {
-      existingErrorMessage.remove();
-    }
-    var passwordInput = document.getElementById('password');
-    passwordInput.classList.add('errorInput');
-    var errorMessageElement = document.createElement('p');
-    errorMessageElement.classList.add('errormessage');
-    errorMessageElement.innerHTML = "Please fill in the password field";
-    var existingErrorMessage = passwordInput.parentNode.querySelector('.errormessage');
-    if (existingErrorMessage) {
-      existingErrorMessage.remove();
-    }
-    passwordInput.parentNode.insertBefore(errorMessageElement, passwordInput.nextSibling);
-    return false;
-} else {
-    var passwordInput = document.getElementById('password');
-    var existingErrorMessage = passwordInput.parentNode.querySelector('.errormessage');
-    if (existingErrorMessage) {
-      existingErrorMessage.remove();
-    }
-  }
-  
-
-  if (password.length < minLength || password.length > maxLength) {
-    var passwordInput = document.getElementById('password');
-    passwordInput.classList.add('errorInput');
-    var errorMessageElement = document.createElement('p');
-    errorMessageElement.classList.add('errormessage');
-    errorMessageElement.innerHTML = "Password length should be between 8 and 32 characters";
-    var existingErrorMessage = passwordInput.parentNode.querySelector('.errormessage');
-    if (existingErrorMessage) {
-      existingErrorMessage.remove();
-    }
-    passwordInput.parentNode.insertBefore(errorMessageElement, passwordInput.nextSibling);
-    return false;
-  }
-  if (!checkbox) { // Check if the checkbox is not checked
-    var checkboxInput = document.getElementById('checkbox');
-    var passwordInput = document.getElementById('password');
-    var existingErrorMessage = passwordInput.parentNode.querySelector('.errormessage');
-    if (existingErrorMessage) {
-      existingErrorMessage.remove();
-    }
-    var errorMessageElement = document.createElement('p');
-    errorMessageElement.classList.add('errormessage');
-    errorMessageElement.innerHTML = "You cannot login without agreeing to the terms and conditions";
-    var existingErrorMessage1 = checkboxInput.parentNode.querySelector('.errormessage');
-    if (existingErrorMessage1) {
-      existingErrorMessage1.remove();
-    }
-    checkboxInput.parentNode.insertBefore(errorMessageElement, checkboxInput.nextSibling);
-    return false;
-  }
-
-  window.open("../clientHome/clientHome.html");
-  return true;
-}
-   
-           
-        </script>
-        
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="../scriptLogin.js"></script>
-    </body>
-</html>
+            
+                
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            
+            </body>
+        </html>
