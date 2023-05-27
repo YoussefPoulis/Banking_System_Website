@@ -6,13 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- include the next 3 lines in every page (website title, bootstrap links and the css file) -->
-    <title>Bank</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+    <title>Transfer Bank</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../Transfers/transfers.js"></script>
+  </head>
+  <body>
     <div class="wrapper">
       <!-- Sidebar  -->
       <nav id="sidebar">
@@ -245,101 +261,187 @@
         </ul>
       </nav>
 
-        <!-- Page Content  -->
-        <div id="content">
-            <!-- top navbar -->
-            <div class="top-bar container-fluid d-flex align-items-center justify-content-between">
-                <div>
-                    <button type="button" id="sidebarCollapse" class="btn" style="color:#fff"><i class="fa-solid fa-bars fa-xl"></i></button>
-                </div>
-                <div class="navbar navbar-expand">
-                    <ul class="navbar-nav mr-auto popover-wrapper" >
-                        <li class="m-3" onclick="togglePopoverreminderes()" ><a href="#" id="reminderButton"><i class="fa-regular fa-calendar-days fa-xl" style="color:#fff"></i></a>
-                            <div  id="remindersPopover" class=" popover-content card  "  >
-                                <div class="card-body" >
-                                     <h3 style="color:#850F0F"  class="card-title text-center">Reminders</h3>
-                                     <p></p> 
-                                     <h5> Date: October 8, 2019</h5>
-                                     <p>  Bill Reminder: Your electricity bill payment of $150 is due on June 10th, 2019. Please ensure timely payment to avoid any late fees.</p>
-                                     <a href="#" class="card-link" style="color:#850F0F"> Dismiss</a>
-                                    <P></p>
-                                        <h5> Date: november 15, 2020</h5>
-                                        <p>  Transfer $200 to George account today.</p>
-                                        <a href="#" class="card-link" style="color:#850F0F"> Dismiss</a>
-                                    
-                              
-                            </div>
-                        </div>
-                        </li>
-                        <li class="m-3" onclick="togglePopovernotification()" > <a href="#" id="notificationsButton"><i class="fa-regular fa-bell fa-xl" style="color:#fff"></i></a> 
-                            
-                            <div  id="notificationsPopover" class=" popover-content card  " >
-                                <div class="card-body" >
-                                     <h3 style="color:#850F0F" class="card-title text-center">Notifications</h3>
-                                     <p></p> 
-                                        <h5> Date: May 5, 2018</h5>
-                                     <p>  Your contact information has been successfully updated</p>
-                                     <a href="#" class="card-link" style="color:#850F0F"> Dismiss</a>
-                                    <p></p>
-                                    <h5 class="card-title"> Date: May 27, 2023</h5>
-                                    <p> A fund transfer of $500 to youhanna has been successfully completed.</p>
-                                    <a href="#" class="card-link" style="color:#850F0F"> Dismiss</a>
-                            </div>
-                        </div>
-                                 </li>
-                        <li class="m-3"><a href="#"><i class="fa-solid fa-gear fa-xl" style="color:#fff"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- main content -->
-            <div class="main-content container-fluid">
-                <!-- page header -->
-                <div class="page-header">
-                    <h3 >Accounts Summary</h3>
-                </div>
-                <!-- page content -->
-                <div class="page-content">
-                    <!-- ************************************** -->
-                    <!-- remove the next lines and put your content here -->
-                    <div class="col-12">
-                        <div class="col-12 row d-flex flex-row">
-                            <div class="card m-4 flex-fill" style="width: 18rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title" >Current Account</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted" >Account Num. 10052324323</h6>
-                                  <p class="card-text" >$ 25,000,000 </p>
-                                  <a href="#" class="card-link" > View Transactions</a>
-                                </div>
-                              </div>
-                              <div class="card m-4 flex-fill" style="width: 18rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title" >Savings Account</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted" >Account Num. 10005004323</h6>
-                                  <p class="card-text" >$ 120 </p>
-                                  <a href="#" class="card-link" >View Transactions</a>
-                                </div>
-                              </div>
-                              <div class="card m-4 flex-fill" style="width: 18rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title" >Deposite Account</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted" >Account Num. 0112345678</h6>
-                                  <p class="card-text" > $ 1,000,000,000</p>
-                                  <a href="#" class="card-link" >View Transactions</a>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
-                    <!-- till here -->
-                    <!-- ************************************** -->
-                </div>
-            </div>
+      <!-- Page Content  -->
+      <div id="content">
+        <!-- top navbar -->
+        <div
+          class="top-bar container-fluid d-flex align-items-center justify-content-between"
+        >
+          <div>
+            <button
+              type="button"
+              id="sidebarCollapse"
+              class="btn"
+              style="color: #fff"
+            >
+              <i class="fa-solid fa-bars fa-xl"></i>
+            </button>
+          </div>
+          <div class="navbar navbar-expand">
+            <ul class="navbar-nav mr-auto">
+              <li class="m-3">
+                <a href="#"
+                  ><i
+                    class="fa-regular fa-calendar-days fa-xl"
+                    style="color: #fff"
+                  ></i
+                ></a>
+              </li>
+              <li class="m-3">
+                <a href="#"
+                  ><i class="fa-regular fa-bell fa-xl" style="color: #fff"></i
+                ></a>
+              </li>
+              <li class="m-3">
+                <a href="#"
+                  ><i class="fa-solid fa-gear fa-xl" style="color: #fff"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <!-- main content -->
+        <div class="main-content container-fluid">
+          <!-- page header -->
+          <div class="page-header">
+            <h3>Transfer</h3>
+          </div>
+          <!-- page content -->
+          <div class="page-content" >
+            <!-- ****************************************************************************************************************** -->
+            <!-- remove the next lines and put your content here -->
+            <form class="row g-3 needs-validation" novalidate id="transferForm">
+              <div class="col-md-4" >
+                <label for="validationCustom01" class="form-label"
+                  >Sender Account Number</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="senderAccountNumber"
+                  placeholder="XXXXXXXXXXXX"
+                  required
+                />
+              </div>
+              
+              <div class="col-md-4">
+
+                <label for="validationCustom02" class="form-label"
+                  >Reciever Account Number</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="recieverAccountNumber"
+                  placeholder="XXXXXXXXXXXX"
+                  required
+                />
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label"
+                  >Amount</label
+                >
+                <div class="input-group has-validation">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="amount"
+                    aria-describedby="inputGroupPrepend"
+                    placeholder="Ex: 100000"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">
+                  Reciever Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="recieverName"
+                  placeholder="Ex: Mohamed Ramadan"
+                  required
+                />
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">
+                  Type
+                </label>
+                <select class="form-select" id="validationCustom04" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>External (Different Bank)</option>
+                  <option>Internal (Same Bank)</option>
+                </select>
+              </div>
+              
+              <div class="col-md-3">
+                <label for="validationCustom05" class="form-label"> Currency</label>
+                <select class="form-select" id="validationCustom04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option> Egyptian Pound</option>
+                    <option> Dollar</option>
+                    <option> Euro</option>
+                  </select>
+              </div>
+              
+              <div class="col-md-6">
+                <label for="validationCustom01" class="form-label"></label>
+                Bank Name </label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="bankName"
+                placeholder="EX: Bank"
+                required
+              />
+<br>
+              <label for="validationCustom01" class="form-label"></label>
+                Purpose of Transfer </label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="purpose"
+                placeholder="EX: Work"
+                required
+              />
+      
+              <div class="col-12">
+                <br>
+                <button
+                onclick="myFunc2()"
+                  class="btn btn-success"
+                  type="submit"
+                  style="background-color: #850f0f"
+                >
+                  Make Transfer
+                </button>
+              </div>
+            </form>
+            <!-- till here -->
+            <!-- ****************************************************************************************************************** -->
+          </div>
+        </div>
+      </div>
     </div>
     <!-- include these links in all pages -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="./clientHome.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="../script.js"></script>
-</body>
+  </body>
 </html>
