@@ -1,268 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- include the next 3 lines in every page (website title, bootstrap links and the css file) -->
     <title>Bank</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-   
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
     <div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <img src="../public/logo.png" alt="InstaBank" height="40px" width="40px">
-                <h4 class="m-2">instaBank</h4>
-            </div>
-
-            <ul class="list-unstyled components">
-                <div class="containder-fluid text-center">
-                    <img class="m-2" src="../public/profile.png" alt="" height="80px" width="80px">
-                    <h5 style="font-size: 15x;">Nada Ibrahim</h5>
-                    <p style="font-size: 13px; margin-top: -10px; margin-bottom: 25px;">nada@gmail.com</p>
-                </div>
-                <li>
-                    <a href="#homeSubmenu"><i class="fa-solid fa-house" style="margin-right: 15px;"></i>Home</a>
-                </li>
-    
-                <li>
-                    <a href="#applicationSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa-solid fa-file-circle-plus" style="margin-right: 10px;"></i> Applications</a>
-                    <ul class="collapse list-unstyled" id="applicationSubmenu">
-                        <li>
-                            <a href="#"><i class="fa-solid fa-clock-rotate-left" style="margin-right: 15px;"></i>Application History</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-folder-plus" style="margin-right: 15px;"></i>Open account</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-folder-minus" style="margin-right: 15px;"></i>Close account</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-sack-dollar" style="margin-right: 15px;"></i>Apply for Loan</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-credit-card" style="margin-right: 15px;"></i>Apply for Credit Card</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#cardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa-solid fa-credit-card" style="margin-right: 15px;"></i>Credit Card</a>
-                    <ul class="collapse list-unstyled" id="cardSubmenu">
-                        <li>
-                            <a href="#"><i class="fa-solid fa-credit-card" style="margin-right: 15px;"></i>View Cards</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-house" style="margin-right: 15px;"></i>View transactions</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-gift" style="margin-right: 15px;"></i>Redeem points</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-money-bill" style="margin-right: 15px;"></i>Pay for Credit Card</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-triangle-exclamation" style="margin-right: 15px;"></i>Report issue</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#transferSubmTenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa-solid fa-money-bill-transfer" style="margin-right: 15px;"></i>Transfers</a>
-                    <ul class="collapse list-unstyled" id="transferSubmTenu">
-                        <li>
-                            <a href="#"><i class="fa-solid fa-money-bill-transfer" style="margin-right: 15px;"></i>Make Transfer</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-clock-rotate-left" style="margin-right: 15px;"></i>Transfers History</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#billsSubmTenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa-solid fa-file-invoice-dollar" style="margin-right: 15px;"></i>  Bills</a>
-                    <ul class="collapse list-unstyled" id="billsSubmTenu">
-                        <li>
-                            <a href="#"><i class="fa-solid fa-money-bill" style="margin-right: 15px;"></i>Pay bill </a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-file-circle-plus" style="margin-right: 15px;"></i>Add bill </a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-file-invoice-dollar" style="margin-right: 15px;"></i>View bills</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-
-        <!-- Page Content  -->
-        <div id="content">
-            <!-- top navbar -->
-            <div class="top-bar container-fluid d-flex align-items-center justify-content-between">
-                <div>
-                    <button type="button" id="sidebarCollapse" class="btn" style="color:#fff">
-                        <i class="fa-solid fa-bars fa-xl"></i>
-                    </button>
-                </div>
-                <div class="navbar navbar-expand">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="m-3"><a href="#"><i class="fa-regular fa-calendar-days fa-xl" style="color:#fff"></i></a></li>
-                        <li class="m-3"><a href="#"><i class="fa-regular fa-bell fa-xl" style="color:#fff"></i></a></li>
-                        <li class="m-3"><a href="#"><i class="fa-solid fa-gear fa-xl" style="color:#fff"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- main content -->
-            <div class="main-content container-fluid">
-                <!-- page header -->
-                <div class="page-header">
-                    <h3>Account: 10005004323</h3>
-                    <p class="top-nav"><a class="top-nav-link" href="../clientHome/clientHome.html">Home</a> / <strong>Account Transactions</strong></p>
-                </div>
-                <!-- page content -->
-                <div class="page-content">
-                    <!-- ****************************************************************************************************************** -->
-                    <!-- remove the next lines and put your content here -->
-                    <div class="col-12 mb-4">
-                        <div class="card">
-                            <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Details</th>
-                                    <th scope="col">Debit</th>
-                                    <th scope="col">Credit</th>
-                                    <th scope="col">Balance</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td scope="row">29/5/2023</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>10,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">10/5/2023</td>
-                                    <td>Transfer to account: 12345678901</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>10,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">27/4/2023</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>10,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">17/3/2023</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>10,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">10/2/2023</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>10,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">30/1/2023</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>10,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">31/12/2022</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>10,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">4/12/2022</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>10,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">28/11/2022</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>10,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">26/10/2022</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>10,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">29/9/2022</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>60,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">25/8/2022</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>50,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">29/7/2022</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>20,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">30/6/2022</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>7,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">29/5/2022</td>
-                                    <td>Electricity Bill Payment</td>
-                                    <td>500</td>
-                                    <td></td>
-                                    <td>3,000</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                        </div>
-                    </div>
-                    <!-- till here -->
-                    <!-- ****************************************************************************************************************** -->
-                </div>
-            </div>
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <img
+            src="../public/logo.png"
+            alt="InstaBank"
+            height="40px"
+            width="40px"
+          />
+          <h4 class="m-2">instaBank</h4>
         </div>
+
+        <ul class="list-unstyled components">
+          <div class="containder-fluid text-center">
+            <img
+              class="m-2"
+              src="../public/profile.png"
+              alt=""
+              height="80px"
+              width="80px"
+            />
+            <h5 style="font-size: 15x">Nada Ibrahim</h5>
+            <p style="font-size: 13px; margin-top: -10px; margin-bottom: 25px">
+              nada@gmail.com
+            </p>
+          </div>
+          <li>
+            <a href="../clientHome/clientHome.html"
+              ><i class="fa-solid fa-house" style="margin-right: 15px"></i
+              >Home</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="#applicationSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              ><i
+                class="fa-solid fa-file-circle-plus"
+                style="margin-right: 10px"
+              ></i>
+              Applications</a
+            >
+            <ul class="collapse list-unstyled" id="applicationSubmenu">
+              <li>
+                <a href="../applicationHistory/applicationHistory.html"
+                  ><i
+                    class="fa-solid fa-clock-rotate-left"
+                    style="margin-right: 15px"
+                  ></i
+                  >Application History</a
+                >
+              </li>
+              <li>
+                <a href="../openAccount/open.html"
+                  ><i
+                    class="fa-solid fa-folder-plus"
+                    style="margin-right: 15px"
+                  ></i
+                  >Open account</a
+                >
+              </li>
+              <li>
+                <a href="../closeAccount/close.html"
+                  ><i
+                    class="fa-solid fa-folder-minus"
+                    style="margin-right: 15px"
+                  ></i
+                  >Close account</a
+                >
+              </li>
+              <li>
+                <a href="../aplyLoan/loan.html"
+                  ><i
+                    class="fa-solid fa-sack-dollar"
+                    style="margin-right: 15px"
+                  ></i
+                  >Apply for Loan</a
+                >
+              </li>
+              <li>
+                <a href="../applyCard/cardApply.html"
+                  ><i
+                    class="fa-solid fa-credit-card"
+                    style="margin-right: 15px"
+                  ></i
+                  >Apply for Credit Card</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="#cardSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              ><i class="fa-solid fa-credit-card" style="margin-right: 15px"></i
+              >Credit Card</a
+            >
+            <ul class="collapse list-unstyled" id="cardSubmenu">
+              <li>
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-credit-card"
+                    style="margin-right: 15px"
+                  ></i
+                  >View Cards</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-house" style="margin-right: 15px"></i
+                  >View transactions</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-gift" style="margin-right: 15px"></i
+                  >Redeem points</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-money-bill"
+                    style="margin-right: 15px"
+                  ></i
+                  >Pay for Credit Card</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-triangle-exclamation"
+                    style="margin-right: 15px"
+                  ></i
+                  >Report issue</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="#transferSubmTenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              ><i
+                class="fa-solid fa-money-bill-transfer"
+                style="margin-right: 15px"
+              ></i
+              >Transfers</a
+            >
+            <ul class="collapse list-unstyled" id="transferSubmTenu">
+              <li>
+                <a href="../Transfers/makeTransfer.html"
+                  ><i
+                    class="fa-solid fa-money-bill-transfer"
+                    style="margin-right: 15px"
+                  ></i
+                  >Make Transfer</a
+                >
+              </li>
+              <li>
+                <a href="../Transfers/makeTransferAbroad.html"
+                  ><i
+                    class="fa-solid fa-money-bill-transfer"
+                    style="margin-right: 15px"
+                  ></i
+                  >Make Transfer (Abroad)</a
+                >
+              </li>
+              <li>
+                <a href="../Transfers/transferHistory.html"
+                  ><i
+                    class="fa-solid fa-clock-rotate-left"
+                    style="margin-right: 15px"
+                  ></i
+                  >Transfers History</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="#billsSubmTenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              ><i
+                class="fa-solid fa-file-invoice-dollar"
+                style="margin-right: 15px"
+              ></i>
+              Bills</a
+            >
+            <ul class="collapse list-unstyled" id="billsSubmTenu">
+              <li>
+                <a href="../Bills/PayBill.html"
+                  ><i
+                    class="fa-solid fa-money-bill"
+                    style="margin-right: 15px"
+                  ></i
+                  >Pay bill
+                </a>
+              </li>
+              <li>
+                <a href="../Bills/AddBill.html"
+                  ><i
+                    class="fa-solid fa-file-circle-plus"
+                    style="margin-right: 15px"
+                  ></i
+                  >Add bill
+                </a>
+              </li>
+              <li>
+                <a href="../Bills/ViewBills.html"
+                  ><i
+                    class="fa-solid fa-file-invoice-dollar"
+                    style="margin-right: 15px"
+                  ></i
+                  >View bills</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content">
+        <!-- top navbar -->
+        <div
+          class="top-bar container-fluid d-flex align-items-center justify-content-between"
+        >
+          <div>
+            <button
+              type="button"
+              id="sidebarCollapse"
+              class="btn"
+              style="color: #fff"
+            >
+              <i class="fa-solid fa-bars fa-xl"></i>
+            </button>
+          </div>
+          <div class="navbar navbar-expand">
+            <ul class="navbar-nav mr-auto">
+              <li class="m-3">
+                <a href="#"
+                  ><i
+                    class="fa-regular fa-calendar-days fa-xl"
+                    style="color: #fff"
+                  ></i
+                ></a>
+              </li>
+              <li class="m-3">
+                <a href="#"
+                  ><i class="fa-regular fa-bell fa-xl" style="color: #fff"></i
+                ></a>
+              </li>
+              <li class="m-3">
+                <a href="#"
+                  ><i class="fa-solid fa-gear fa-xl" style="color: #fff"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- main content -->
+        <div class="main-content container-fluid">
+          <!-- page header -->
+          <div class="page-header">
+            <h3>Account: 10005004323</h3>
+            <p class="top-nav">
+              <a class="top-nav-link" href="../clientHome/clientHome.html"
+                >Home</a
+              >
+              / <strong>Account Transactions</strong>
+            </p>
+          </div>
+          <!-- page content -->
+          <div class="page-content">
+            <!-- ****************************************************************************************************************** -->
+            <!-- remove the next lines and put your content here -->
+            <div class="col-12 mb-4">
+              <div class="card">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col">Details</th>
+                      <th scope="col">Debit</th>
+                      <th scope="col">Credit</th>
+                      <th scope="col">Balance</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">29/5/2023</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>10,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">10/5/2023</td>
+                      <td>Transfer to account: 12345678901</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>10,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">27/4/2023</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>10,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">17/3/2023</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>10,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">10/2/2023</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>10,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">30/1/2023</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>10,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">31/12/2022</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>10,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">4/12/2022</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>10,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">28/11/2022</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>10,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">26/10/2022</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>10,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">29/9/2022</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>60,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">25/8/2022</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>50,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">29/7/2022</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>20,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">30/6/2022</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>7,000</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">29/5/2022</td>
+                      <td>Electricity Bill Payment</td>
+                      <td>500</td>
+                      <td></td>
+                      <td>3,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- till here -->
+            <!-- ****************************************************************************************************************** -->
+          </div>
+        </div>
+      </div>
     </div>
     <!-- include these links in all pages -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="../script.js"></script>
     <script src="./clientHome.js"></script>
-    
-</body>
+  </body>
 </html>
