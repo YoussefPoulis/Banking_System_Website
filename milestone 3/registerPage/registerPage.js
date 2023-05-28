@@ -97,6 +97,7 @@ function handleSubmit(event) {
     }
     
     window.open("../loginPage/loginPage.html");
+    window.close('../registerPage/register.html');
     return true;
 }
 if (localStorage.getItem('isBlind')) {
@@ -218,5 +219,7 @@ function speechToText() {
 }
 function openPage(){
     window.open('../login/loginPage.html');
+    window.close('../registerPage/register.html');
+
     return true;
 }

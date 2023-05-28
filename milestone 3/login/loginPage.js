@@ -109,12 +109,18 @@ function handleSubmit(event) {
 
     if(isValidClient===true){
     window.open("../clientHome/clientHome.html");
+    window.close("../login/loginPage.html");
+
     return true;
 }else if(isValidBanker===true){
     window.open("../bankerHome/bankerHome.html");
+    window.close("../login/loginPage.html");
+
     return true;
 }else if(isValidAdmin===true) {
     window.open("../adminHome/adminHome.html");
+    window.close("../login/loginPage.html");
+
     return true;
 }
 else{
@@ -125,6 +131,7 @@ else{
 
 function myregister() {
     window.open("../registerPage/register.html");
+    window.close("../login/loginPage.html");
     return true;
 }
 
