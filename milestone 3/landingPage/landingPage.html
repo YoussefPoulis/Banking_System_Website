@@ -173,13 +173,12 @@
           </div>
 
           <div class="row d-flex justify-content-center align-items-center m-3">
-            <div >
-                <button onclick="localStorage.setItem('isBlind', 'true'); event.preventDefault(); speechToText();" class="col-lg-3 btn themed-btn"  onmouseenter="sayWords('Start Visually impaired mode button')" onmouseout="stopTextToSpeech()"> Start Visually impaired mode </button>
+            <div class="col-lg-2" >
+                <button onclick="localStorage.setItem('isBlind', 'true'); event.preventDefault(); speechToText();" class=" btn themed-btn"  onmouseenter="sayWords('Start Visually impaired mode button')" onmouseout="stopTextToSpeech()"> Start Visually impaired mode </button>
             </div>
-            <P></P>
-            <div >
-                <button onclick="localStorage.removeItem('isBlind');event.preventDefault();" class="col-lg-3 btn themed-btn" ; onmouseenter="sayWords('Stop Visually impaired mode')" onmouseout="stopTextToSpeech()">Stop Visually impaired mode</button>
-        </div>
+            <div class="col-lg-2" >
+                <button onclick="localStorage.removeItem('isBlind');event.preventDefault();" class=" btn themed-btn" ; onmouseenter="sayWords('Stop Visually impaired mode')" onmouseout="stopTextToSpeech()">Stop Visually impaired mode</button>
+            </div>
       </div>
 
     </section><!-- End visuallyImp Section -->
