@@ -7,3 +7,19 @@ function change() {
     }
 
 }
+
+const button = document.getElementById("alert-id");
+button.addEventListener("click", myFunc4, false);
+
+function myFunc4(event) {
+	event.preventDefault();
+
+    Swal.fire({
+        title: 'succesfull!',
+        icon: 'success',
+        confirmButtonColor: '#850F0F'
+    })
+    sayWords("succesfull");
+	
+
+}
