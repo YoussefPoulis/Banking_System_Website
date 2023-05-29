@@ -21,6 +21,17 @@ function togglePopovernotification() {
     remindersPopover.style.display = "none"; // Close reminders popover
   }
 }
+function logout() {
+  var remindersPopover = document.getElementById("remindersPopover");
+  var log = document.getElementById("log");
+
+  if (log.style.display === "block") {
+    log.style.display = "none";
+  } else {
+    log.style.display = "block";
+    remindersPopover.style.display = "none"; // Close reminders popover
+  }
+}
 
 const xValues = ["July","Aug","Sept","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun"];
 
