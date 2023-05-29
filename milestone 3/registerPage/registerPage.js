@@ -40,6 +40,9 @@ function handleSubmit(event) {
     var isValidCurrency = validateField('currency');
     var isValidAccountType = validateField('accounttype');
     var isValidCheckbox = validateField('checkbox');
+    var isValidnew=validateField('new');
+    var  isvalidaccountnumber=validateField('accountnumber');
+    
     // var isValidDateBirth = validateField('dateBirth');
     
     if(!isValidFullname){
@@ -87,6 +90,14 @@ function handleSubmit(event) {
         sayWords("Please agree to the terms and conditions");
         return
     }
+    if (!isvalidaccountnumber) {
+        sayWords("Please agree to the terms and conditions");
+        return
+    }
+    if(!isValidnew){
+        sayWords("Please fill this field");
+        return
+    }
     // if (!isValidDateBirth) {
     //     sayWords("Please fill in the Date Birth field");
     //     return
@@ -112,8 +123,7 @@ function handleSubmit(event) {
         return false;
     }
     
-    window.open("../loginPage/loginPage.html");
-    window.close('../registerPage/register.html');
+    window.open("../login/loginPage.html");
     return true;
 }
 if (localStorage.getItem('isBlind')) {
@@ -179,7 +189,8 @@ function speechToTextResgister() {
             var countryRegex=/(?:my\s)?country\s(?:is|should\sbe)?\s([\w\s]+)/i;
             var typeRegex=/(?:my\s)?type\s(?:is|should\sbe)?\s([\w\s]+)/i;
             var currencyRegex=/(?:my\s)?currency\s(?:is|should\sbe)?\s([\w\s]+)/i;
-
+            var newRegex=/(?:my\s)?type\s(?:is|should\sbe)?\s([\w\s]+)/i;
+            var accountnumberRegex=/(?:my\s)?national ID\s(?:is|should\sbe)?\s(\d+(\.\d+)?)/i;
             // Extract username and password using regular expressions
             var fullnameMatch = transcript.match(fullnameRegex);
             var usernameMatch = transcript.match(usernameRegex);
@@ -191,6 +202,8 @@ function speechToTextResgister() {
             var countryMatch=transcript.match(countryRegex);
             var typeMatch=transcript.match(typeRegex);
             var currencyMatch=transcript.match(currencyRegex);
+            var newMatch=transcript.match(newRegex);
+            var accountnumberMatch=transcript.match(accountnumberRegex);
            // -------------------------------------------------------------------------------------/
  
             if (fullnameMatch && fullnameMatch[1]) {
@@ -235,6 +248,15 @@ function speechToTextResgister() {
                 var currency= currencyMatch[1];
                 document.getElementById("currency").value =currency;
             }
+            if (newMatch && newMatch[1]) {
+                var newm= newMatch[1];
+                document.getElementById("new").value =newm;
+            }
+            if (accountnumberMatch && accountnumberMatch[1]) {
+                var accountnumber= accountnumberMatch[1];
+                document.getElementById("accountnumber").value =accountnumber;
+            }
+            
 
 
 
@@ -253,8 +275,6 @@ function speechToTextResgister() {
     }
 }
 function openPage(){
-    window.open( "../login/loginPage.html");
-    window.close('../registerPage/register.html');
-
+    window.open('../login/loginPage.html');
     return true;
 }

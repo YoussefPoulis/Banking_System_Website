@@ -43,7 +43,7 @@
                                 <input  type="tel" name="phoneNumber" id="phoneNumber" class="form__input" placeholder="Phone Number" onmouseenter="sayWords('Phone Number field')" onmouseout="stopTextToSpeech()">
                               </div>
                               <div class="row">
-                                <input  type="email" name="email" id="email" class="form__input" placeholder="Email" onmouseenter="sayWords('Email field')" onmouseout="stopTextToSpeech()" required>
+                                <input  type="email" name="email" id="email" class="form__input" placeholder="Email" onmouseenter="sayWords('Email field')" onmouseout="stopTextToSpeech()">
                               </div>
                               <div class="row">
                                 <input  type="text" name="address" id="address" class="form__input" placeholder="Address" onmouseenter="sayWords('Address field')" onmouseout="stopTextToSpeech()">
@@ -55,22 +55,35 @@
                                 <input  type="text" name="country" id="country" class="form__input" placeholder="country" onmouseenter="sayWords('country field field')" onmouseout="stopTextToSpeech()">
                               </div>
                               <div class="row">
+                                <label  type="text" name="new" id="New" class="form__input" placeholder="choose" onmouseenter="sayWords('n')" onmouseout="stopTextToSpeech()">
+                                <select  id="new"  class="form-select"  onmouseenter="sayWords('choose from new user or existing user')" onmouseout="stopTextToSpeech()" >
+                                    <option selected disabled value="" >New</option>
+                                     <option value="newuser">newuser</option>
+                                     <option value="existing user">existing user</option>
+                                   </select>
+                             </div>
+                             <div class="row">
+                              <input  type="number" name="accountnumber" id="accountnumber" class="form__input" placeholder="account number" onmouseenter="sayWords('account numberfield')" onmouseout="stopTextToSpeech()">
+                            </div>
+                              <div class="row">
                                 <label  type="text" name="AccountType"  class="form__input" placeholder="AccountType" onmouseenter="sayWords('account type field')" onmouseout="stopTextToSpeech()">
-                                <select  id="accounttype"  class="form-select"  onmouseenter="sayWords('choose from saving and salary')" onmouseout="stopTextToSpeech()" >
+                                <select  id="accounttype"  class="form-select"  onmouseenter="sayWords('choose from saving and salary and deposite')" onmouseout="stopTextToSpeech()" >
                                    <option selected disabled value="" >AccountType</option>
                                     <option value="saving">saving</option>
                                     <option value="salary">salary</option>
+                                    <option value="deposite">deposite</option>
                                   </select>
                               </div>
-                              <div class="row">
-                                <label  type="text" name="Currency" id="Currency" class="form__input" placeholder="Currency" onmouseenter="sayWords('currency field')" onmouseout="stopTextToSpeech()">
-                                <select  id="currency"  class="form-select"  onmouseenter="sayWords('choose from euro or pound or Dollar')" onmouseout="stopTextToSpeech()" >
-                                    <option selected disabled value="" >currency</option>
-                                     <option value="euro">Euro</option>
-                                     <option value="pound">Pound</option>
-                                     <option value="dollar">Dollar</option>
-                                   </select>
-                             </div>
+                             
+                             <div class="row">
+                              <label  type="text" name="Currency" id="Currency" class="form__input" placeholder="Currency" onmouseenter="sayWords('')" onmouseout="stopTextToSpeech()">
+                              <select  id="currency"  class="form-select"  onmouseenter="sayWords('choose from euro or pound or Dollar or deposite')" onmouseout="stopTextToSpeech()" >
+                                  <option selected disabled value="" >currency</option>
+                                   <option value="euro">Euro</option>
+                                   <option value="pound">Pound</option>
+                                   <option value="dollar">Dollar</option>
+                                 </select>
+                           </div>
                               <div class="row">
                                 <label onmouseenter="sayWords('I agree to the terms and conditions')" onmouseout="stopTextToSpeech()" >
                                 <input type="checkbox" id="checkbox" > I agree to the terms and conditions
