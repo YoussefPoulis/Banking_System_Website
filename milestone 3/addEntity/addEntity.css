@@ -114,7 +114,7 @@ ul ul a {
 
 .main-content{
     width: 90%;
-    margin-top: 7rem;
+    margin-top: 3rem;
     padding: 0 1.5rem;
     /* background-color: pink; */
 }
@@ -125,7 +125,8 @@ ul ul a {
 }
 
 .page-content {
-
+    border-radius: 15px;
+    padding: 1px;
 }
 .curency {
 margin-top: 20px;
