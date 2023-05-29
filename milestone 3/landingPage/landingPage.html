@@ -26,19 +26,19 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
+        <img id="sound-input" style="display: none" width="70" src="https://media3.giphy.com/media/YzgvFJN9XBDBVkXsny/giphy.gif?cid=6c09b9521hniorc9tdo0wbds32xvqmpzpz80435x4m77cqmq&ep=v1_stickers_related&rid=giphy.gif&ct=s">
       <a class="logo d-flex align-items-center">
-        <img src="../public/logo2.png" alt="">
+        <img src="../public/logo2.png" alt="" onmouseenter="sayWords('logo picture')" onmouseout="stopTextToSpeech()">
         <span>instaBank</span>
       </a>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#features">Features</a></li>
-          <li><a class="nav-link" href="#visuallyImp">Visually impaired</a></li>
-          <li><a class="nav-link" href="../login/loginPage.html">Login</a></li>
-          <li><a class="getstarted" href="../registerPage/register.html">Register</a></li>
+          <li><a class="nav-link scrollto active" href="#hero" onmouseenter="sayWords('home button')" onmouseout="stopTextToSpeech()">Home</a></li>
+          <li><a class="nav-link scrollto" href="#features" onmouseenter="sayWords('features button')" onmouseout="stopTextToSpeech()">Features</a></li>
+          <li><a class="nav-link" href="#visuallyImp" onmouseenter="sayWords('visually impaired button')" onmouseout="stopTextToSpeech()">Visually impaired</a></li>
+          <li><a class="nav-link" href="../login/loginPage.html" onmouseenter="sayWords('login button')" onmouseout="stopTextToSpeech()">Login</a></li>
+          <li><a class="getstarted" href="../registerPage/register.html" onmouseenter="sayWords('register button')" onmouseout="stopTextToSpeech()">Register</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -52,19 +52,19 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">instaBank online banking system</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">Enjoy a seamless, convenient, and secure access 
+          <h1 data-aos="fade-up" onmouseenter="sayWords('instaBank online banking system')" onmouseout="stopTextToSpeech()">instaBank online banking system</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400" onmouseenter="sayWords('Enjoy a seamless, convenient, and secure access to your banking anytime, anywhere.')" onmouseout="stopTextToSpeech()">Enjoy a seamless, convenient, and secure access 
             to your banking anytime, anywhere.</h2>
           <div data-aos="fade-up" data-aos-delay="600">
             <div class="text-center text-lg-start">
-              <a href="#features" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>Discover more</span>
+              <a href="#features" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center" >
+                <span  onmouseenter="sayWords('Discover more button')" onmouseout="stopTextToSpeech()">Discover more</span>
               </a>
             </div>
           </div>
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="../public/hero-img.png" class="img-fluid" alt="">
+          <img src="../public/hero-img.png" class="img-fluid" alt="" >
         </div>
       </div>
     </div>
@@ -78,11 +78,11 @@
         <!-- Feature Icons -->
         <div class="row">
           <header class="section-header">
-            <p>Enjoy a wide range of features</p>
+            <p onmouseenter="sayWords('Enjoy a wide range of features')" onmouseout="stopTextToSpeech()">Enjoy a wide range of features</p>
           </header>
           <div class="row">
             <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-              <img src="../public/features-3.png" class="img-fluid p-4" alt="">
+              <img src="../public/features-3.png" class="img-fluid p-4" alt="" onmouseenter="sayWords('picture')" onmouseout="stopTextToSpeech()">
             </div>
             <div class="col-xl-8 d-flex content">
               <div class="row align-self-center gy-4">
@@ -90,48 +90,48 @@
                 <div class="col-md-6 icon-box" data-aos="fade-up">
                   <i class="ri-line-chart-line"></i>
                   <div>
-                    <h4>Open or Close a bank account</h4>
-                    <p>Seamlessly open or close bank accounts with our user-friendly online banking system, empowering customers to conveniently manage their finances from anywhere</p>
+                    <h4 onmouseenter="sayWords('Open or Close a bank account')" onmouseout="stopTextToSpeech()">Open or Close a bank account</h4>
+                    <p onmouseenter="sayWords('Seamlessly open or close bank accounts with our user-friendly online banking system, empowering customers to conveniently manage their finances from anywhere')" onmouseout="stopTextToSpeech()">Seamlessly open or close bank accounts with our user-friendly online banking system, empowering customers to conveniently manage their finances from anywhere</p>
                   </div>
                 </div>
 
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                   <i class="ri-stack-line"></i>
                   <div>
-                    <h4>Request a loan or credit card</h4>
-                    <p>Easily request a loan or credit card, allowing you to access financial support and credit options with a simple and efficient application process.</p>
+                    <h4 onmouseenter="sayWords('Request a loan or credit card')" onmouseout="stopTextToSpeech()">Request a loan or credit card</h4>
+                    <p onmouseenter="sayWords('Easily request a loan or credit card, allowing you to access financial support and credit options with a simple and efficient application process.')" onmouseout="stopTextToSpeech()">Easily request a loan or credit card, allowing you to access financial support and credit options with a simple and efficient application process.</p>
                   </div>
                 </div>
 
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                   <i class="ri-brush-4-line"></i>
                   <div>
-                    <h4>Monitor your account and card activities</h4>
-                    <p>Stay in control of your finances by effortlessly monitoring your account, loan, and card activities, empowering you to track transactions and manage your financial well-being with ease.</p>
+                    <h4 onmouseenter="sayWords('Monitor your account and card activities')" onmouseout="stopTextToSpeech()">Monitor your account and card activities</h4>
+                    <p onmouseenter="sayWords('Stay in control of your finances by effortlessly monitoring your account, loan, and card activities, empowering you to track transactions and manage your financial well-being with ease.')" onmouseout="stopTextToSpeech()">Stay in control of your finances by effortlessly monitoring your account, loan, and card activities, empowering you to track transactions and manage your financial well-being with ease.</p>
                   </div>
                 </div>
 
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
                   <i class="ri-magic-line"></i>
                   <div>
-                    <h4>Pay your credit cards easily</h4>
-                    <p>Conveniently make payments towards your credit cards, providing a seamless and hassle-free experience to manage your credit card dues efficiently and stay on top of your financial obligations.</p>
+                    <h4 onmouseenter="sayWords('Pay your credit cards easily')" onmouseout="stopTextToSpeech()">Pay your credit cards easily</h4>
+                    <p onmouseenter="sayWords('Conveniently make payments towards your credit cards, providing a seamless and hassle-free experience to manage your credit card dues efficiently and stay on top of your financial obligations.')" onmouseout="stopTextToSpeech()">Conveniently make payments towards your credit cards, providing a seamless and hassle-free experience to manage your credit card dues efficiently and stay on top of your financial obligations.</p>
                   </div>
                 </div>
 
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
                   <i class="ri-command-line"></i>
                   <div>
-                    <h4>Local and International Transfers </h4>
-                    <p>Seamlessly transfer funds both locally and internationally, enabling you to send money quickly and conveniently to recipients around the world.</p>
+                    <h4 onmouseenter="sayWords('Local and International Transfers')" onmouseout="stopTextToSpeech()">Local and International Transfers </h4>
+                    <p onmouseenter="sayWords('Seamlessly transfer funds both locally and internationally, enabling you to send money quickly and conveniently to recipients around the world.')" onmouseout="stopTextToSpeech()">Seamlessly transfer funds both locally and internationally, enabling you to send money quickly and conveniently to recipients around the world.</p>
                   </div>
                 </div>
 
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
                   <i class="ri-radar-line"></i>
                   <div>
-                    <h4>Bill payments</h4>
-                    <p>Securely pay your Bills with a wide range of billers to settle your various utility, service, and recurring payments with just a few clicks.</p>
+                    <h4 onmouseenter="sayWords('Bill payments')" onmouseout="stopTextToSpeech()">Bill payments</h4>
+                    <p onmouseenter="sayWords('Securely pay your Bills with a wide range of billers to settle your various utility, service, and recurring payments with just a few clicks.')" onmouseout="stopTextToSpeech()">Securely pay your Bills with a wide range of billers to settle your various utility, service, and recurring payments with just a few clicks.</p>
                   </div>
                 </div>
 
@@ -152,29 +152,33 @@
       <div class="container" data-aos="fade-up">
         <div class="row">
           <header class="section-header m-2">
-            <p>The system provides support to visually impaired customers</p>
+            <p onmouseenter="sayWords('The system provides support to visually impaired customers')" onmouseout="stopTextToSpeech()" >The system provides support to visually impaired customers</p>
           </header>
 
           <div class="row d-flex justify-content-center align-items-center m-4">
             <div class="col-lg-4 m-4" data-aos="fade-up" data-aos-delay="200">
               <div class="box">
-                <img src="../public/sound.png" class="img-fluid" alt="" style="max-width: 200px; max-height: 200px;">
-                <h3>The user can hear any text the mouse is pointing at using a screen reader</h3>
+                <img src="../public/sound.png" class="img-fluid" alt="" style="max-width: 200px; max-height: 200px;" onmouseenter="sayWords('The system provides support to visually impaired customers')" onmouseout="stopTextToSpeech()">
+                <h3 onmouseenter="sayWords('The user can hear any text the mouse is pointing at using a screen reader')" onmouseout="stopTextToSpeech()" >The user can hear any text the mouse is pointing at using a screen reader</h3>
               </div>
             </div>
 
             <div class="col-lg-4 m-4" data-aos="fade-up" data-aos-delay="400">
               <div class="box">
-                <img src="../public/mic.png" class="img-fluid" alt="" style="max-width: 200px; max-height: 160px;">
-                <h3>The user can input the required data using voice commands</h3>
+                <img src="../public/mic.png" class="img-fluid" alt="" style="max-width: 200px; max-height: 160px;"onmouseenter="sayWords(' mic picture')" onmouseout="stopTextToSpeech()">
+                <h3 onmouseenter="sayWords('The user can input the required data using voice commands')" onmouseout="stopTextToSpeech()">The user can input the required data using voice commands</h3>
               </div>
             </div>
 
           </div>
 
           <div class="row d-flex justify-content-center align-items-center m-3">
-            <button class="col-lg-3 btn themed-btn">Start Visually impaired mode</button>
-          </div>
+            <div >
+                <button onclick="localStorage.setItem('isBlind', 'true'); event.preventDefault(); speechToText();" class="col-lg-3 btn themed-btn"  onmouseenter="sayWords('Start Visually impaired mode button')" onmouseout="stopTextToSpeech()"> Start Visually impaired mode </button>
+            </div>
+            <P></P>
+            <div >
+                <button onclick="localStorage.removeItem('isBlind');event.preventDefault();" class="col-lg-3 btn themed-btn" ; onmouseenter="sayWords('Stop Visually impaired mode')" onmouseout="stopTextToSpeech()">Stop Visually impaired mode</button>
         </div>
       </div>
 
@@ -190,19 +194,19 @@
         <div class="row gy-4">
           <div class="col-lg-3 col-md-12 footer-info">
             <a href="index.html" class="logo d-flex align-items-center">
-              <img src="../public/logo2.png" alt="">
-              <span>instaBank</span>
+              <img src="../public/logo2.png" alt="" onmouseenter="sayWords('logo picture')" onmouseout="stopTextToSpeech()">
+              <span onmouseenter="sayWords('instaBank')" onmouseout="stopTextToSpeech()">instaBank</span >
             </a>
-            <p>
+            <p onmouseenter="sayWords('phone : +1 5589 55488 55....Email: info@instaBank.com')" onmouseout="stopTextToSpeech()">
               <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong >Phone:</strong> +1 5589 55488 55<br>
               <strong>Email:</strong> info@instaBank.com<br>
             </p>
           </div>
           
           <div class="col-lg-2 col-md-12 footer-contact text-center text-md-start">
             <h6 style="color: #850F0F;"><strong>Branches</strong></h6>
-            <p>
+            <p onmouseenter="sayWords('115 Street 16.. New Cairo, Cairo..Egypt.. 11 ELHegaz Street..Heliopolis, Cairo..Egypt  ')" onmouseout="stopTextToSpeech()">
               115 Street 16 <br>
               New Cairo, Cairo<br>
               Egypt <br><br>
@@ -214,7 +218,7 @@
 
           <div class="col-lg-4 col-md-12 footer-contact text-center text-md-start">
             <br>
-            <p>
+            <p onmouseenter="sayWords('15 Street 77..Maadi, Cairo..Egypt.. 88 ELTayaran Street. Nasr City, Cairo..Egypt')" onmouseout="stopTextToSpeech()">
               15 Street 77 <br>
               Maadi, Cairo<br>
               Egypt <br><br>
@@ -228,7 +232,7 @@
     </div>
 
     <div class="container">
-      <div class="copyright">
+      <div class="copyright" onmouseenter="sayWords('copyright..instabank..All Rights Reserved')" onmouseout="stopTextToSpeech()">
         &copy; Copyright <strong><span>instaBank</span></strong>. All Rights Reserved
       </div>
     </div>
