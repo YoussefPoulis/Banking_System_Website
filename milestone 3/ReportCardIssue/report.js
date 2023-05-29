@@ -4,7 +4,8 @@ button.addEventListener("click", myFunc4, false);
 function myFunc4(event) {
 	event.preventDefault();
 
-	let creditCardNumber = document.getElementById("creditcardnumber").value
+    let creditCardNumber = document.getElementById("creditcardnumber").value
+    let description = document.getElementById("description").value
 
 	if (creditCardNumber !== "" ) {
 		Swal.fire({

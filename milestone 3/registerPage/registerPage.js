@@ -253,7 +253,7 @@ function speechToTextResgister() {
     }
 }
 function openPage(){
-    window.open('../login/loginPage.html');
+    window.open( "../login/loginPage.html");
     window.close('../registerPage/register.html');
 
     return true;
