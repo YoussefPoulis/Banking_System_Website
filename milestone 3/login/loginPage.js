@@ -122,18 +122,18 @@ function handleSubmit(event) {
     // }
 
     if(isValidClient===true){
-    window.open("../clientHome/clientHome.html", "_self");
-    window.close("../login/loginPage.html", "_self");
+    window.open("../clientHome/clientHome.html");
+    window.close("../login/loginPage.html");
 
     return true;
 }else if(isValidBanker===true){
-    window.open("../Banker/BankerHomePage.html", "_self");
-    window.close("../login/loginPage.html", "_self");
+    window.open("../Banker/BankerHomePage.html");
+    window.close("../login/loginPage.html");
 
     return true;
 }else if(isValidAdmin===true) {
-    window.open("../adminHome/adminHome.html", "_self");
-    window.close("../login/loginPage.html", "_self");
+    window.open("../adminHome/adminHome.html");
+    window.close("../login/loginPage.html");
 
     return true;
 }

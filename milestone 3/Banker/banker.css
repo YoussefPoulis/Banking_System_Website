@@ -1,0 +1,12 @@
+#log{
+    max-width: 250px;
+    background: #fff;
+    color: #000;
+    transition: all 0.3s;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+    left:-40px;
+    padding: 1%;
+    top: 3.5em;
+    }

@@ -27,6 +27,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./banker.css">
+
   </head>
   <body>
     <div class="wrapper">
@@ -99,42 +101,24 @@
       <!-- Page Content  -->
       <div id="content">
         <!-- top navbar -->
-        <div
-          class="top-bar container-fluid d-flex align-items-center justify-content-between"
-        >
+        <div class="top-bar container-fluid d-flex align-items-center justify-content-between">
           <div>
-            <button
-              type="button"
-              id="sidebarCollapse"
-              class="btn"
-              style="color: #fff"
-            >
-              <i class="fa-solid fa-bars fa-xl"></i>
-            </button>
+              <button type="button" id="sidebarCollapse" class="btn" style="color:#fff"><i class="fa-solid fa-bars fa-xl"></i></button>
           </div>
           <div class="navbar navbar-expand">
-            <ul class="navbar-nav mr-auto">
-              <li class="m-3">
-                <a href="#"
-                  ><i
-                    class="fa-regular fa-calendar-days fa-xl"
-                    style="color: #fff"
-                  ></i
-                ></a>
-              </li>
-              <li class="m-3">
-                <a href="#"
-                  ><i class="fa-regular fa-bell fa-xl" style="color: #fff"></i
-                ></a>
-              </li>
-              <li class="m-3">
-                <a href="#"
-                  ><i class="fa-solid fa-gear fa-xl" style="color: #fff"></i
-                ></a>
-              </li>
-            </ul>
+              <ul class="navbar-nav mr-auto popover-wrapper" >
+                
+                  <!-- Settings -->
+                </li>
+                           
+                <li class="m-3" onclick="logout()" > <a href="#" id="notificationsButton"  onmouseenter="sayWords('notification button')" onmouseout="stopTextToSpeech()"><i class="fa-solid fa-right-from-bracket fa-xl" style="color:#fff"></i></a> 
+           
+                 <div  id="log" class=" popover-content card  " >
+                   <a href="../landingPage/landingPage.html" class="mt-3 btn themed-btn-outlined" style="height: 50px;" onmouseenter="sayWords('view transactions button')" onmouseout="stopTextToSpeech()">Logout</a>
+                 </div>
+                      </li>                  </ul>
           </div>
-        </div>
+      </div>
         <!-- main content -->
         <div class="main-content container-fluid">
           <!-- page header -->
@@ -156,13 +140,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr id="one">
                     <td>30/05/2023</td>
                     <td> Mahmoud Elkhatib</td>
 
                     <td style="color: green;">+230,000,000 LE</td>
                     <td> <button
                         class="btn btn-success"
+                        onclick=Accept("one")
+
                         type="submit"
                         style="background-color: green; margin-right: 20px;"
                       >
@@ -174,6 +160,8 @@
                         <button
                       class="btn btn-success"
                       type="submit"
+                      onclick=Reject("one")
+
                       style="background-color: red"
                     >
                     Reject
@@ -182,13 +170,15 @@
 
         
                   </tr>
-                  <tr>
+                  <tr id="two">
                     <td>01/06/2023</td>
                     <td>Hossam Hassan</td>
 
                     <td style="color: green;">+8,350,000 LE</td>
                     <td> <button
                         class="btn btn-success"
+                        onclick=Accept("two")
+
                         type="submit"
                         style="background-color: green; margin-right: 20px;"
                       >
@@ -200,6 +190,8 @@
                         <button
                       class="btn btn-success"
                       type="submit"
+                      onclick=Reject("two")
+
                       style="background-color: red"
                     >
                     Reject
@@ -207,7 +199,7 @@
                     </td>
             
                   </tr>
-                  <tr>
+                  <tr id="three">
                     <td>03/06/2023</td>
                     <td> Ali Maloul</td>
 
@@ -215,6 +207,8 @@
                     <td> <button
                         class="btn btn-success"
                         type="submit"
+                        onclick=Accept("three")
+
                         style="background-color: green; margin-right: 20px;"
                       >
                         Accept
@@ -225,6 +219,8 @@
                         <button
                       class="btn btn-success"
                       type="submit"
+                      onclick=Reject("three")
+
                       style="background-color: red"
                     >
                     Reject
@@ -233,13 +229,15 @@
 
        
                   </tr>
-                  <tr>
+                  <tr id="four">
                     <td>04/06/2023</td>
                     <td>Mahmoud wahid</td>
 
                     <td style="color: red;">-100,345 LE</td>
                     <td> <button
                         class="btn btn-success"
+                        onclick=Accept("four")
+
                         type="submit"
                         style="background-color: green; margin-right: 20px;"
                       >
@@ -251,6 +249,8 @@
                         <button
                       class="btn btn-success"
                       type="submit"
+                      onclick=Reject("four")
+
                       style="background-color: red"
                     >
                     Reject
@@ -258,7 +258,7 @@
                     </td>
        
                   </tr>
-                  <tr>
+                  <tr id="five">
                     <td>08/06/2023</td>
                     <td>Dina elsherbiny</td>
 
@@ -266,6 +266,8 @@
                     <td> <button
                         class="btn btn-success"
                         type="submit"
+                        onclick=Accept("five")
+
                         style="background-color: green; margin-right: 20px;"
                       >
                         Accept
@@ -276,6 +278,8 @@
                         <button
                       class="btn btn-success"
                       type="submit"
+                      onclick=Reject("five")
+
                       style="background-color: red"
                     >
                     Reject
@@ -283,7 +287,7 @@
                     </td>
          
                   </tr>
-                  <tr>
+                  <tr id="six">
                     <td>15/06/2023</td>
                     <td>Mohamed Hany</td>
 
@@ -291,6 +295,8 @@
                     <td> <button
                         class="btn btn-success"
                         type="submit"
+                        onclick=Accept("six")
+
                         style="background-color: green; margin-right: 20px;"
                       >
                         Accept
@@ -301,6 +307,8 @@
                         <button
                       class="btn btn-success"
                       type="submit"
+                      onclick=Reject("six")
+
                       style="background-color: red"
                     >
                     Reject
@@ -308,7 +316,7 @@
                     </td>
       
                   </tr>
-                  <tr>
+                  <tr id="seven">
                     <td>01/07/2023</td>
                     <td> Hassan Shakoush</td>
 
@@ -317,6 +325,8 @@
                     <td> <button
                         class="btn btn-success"
                         type="submit"
+                        onclick=Accept("seven")
+
                         style="background-color: green; margin-right: 20px;"
                       >
                         Accept
@@ -327,6 +337,8 @@
                         <button
                       class="btn btn-success"
                       type="submit"
+                      onclick=Reject("seven")
+
                       style="background-color: red"
                     >
                     Reject
@@ -358,5 +370,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="../script.js"></script>
+    <script src="../clientHome/clientHome.js"></script>
+    <script src="./scriptAcc.js"></script>
   </body>
 </html>
