@@ -292,7 +292,13 @@
                       </div>
                   </div>
                            </li>
-                           <li class="m-3"><a href="#"><i class="fa-solid fa-right-from-bracket fa-xl" style="color: #ffffff;"></i></a></li>              </ul>
+                           
+                           <li class="m-3" onclick="logout()" > <a href="#" id="notificationsButton"  onmouseenter="sayWords('notification button')" onmouseout="stopTextToSpeech()"><i class="fa-solid fa-right-from-bracket fa-xl" style="color:#fff"></i></a> 
+                      
+                            <div  id="log" class=" popover-content card  " >
+                              <a href="../landingPage/landingPage.html" class="mt-3 btn themed-btn-outlined" style="height: 50px;" onmouseenter="sayWords('view transactions button')" onmouseout="stopTextToSpeech()">Logout</a>
+                            </div>
+                                 </li>            </ul>
           </div>
       </div>
         <!-- main content -->
@@ -457,6 +463,6 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="../script.js"></script>
-    <script src="./clientHome.js"></script>
+    <script src="../clientHome/clientHome.js"></script>
   </body>
 </html>
