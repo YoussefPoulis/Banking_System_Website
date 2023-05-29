@@ -33,39 +33,53 @@ function handleSubmit(event) {
 
     var isValidUsername = validateField('username');
     var isValidPassword = validateField('password');
-     
+     var password=document.getElementById('password').value;
     var username= document.getElementById('username').value;
     var isValidClient=false;
     var isValidBanker=false;
     var isValidAdmin=false;
     if (!isValidUsername) {
         sayWords("Please fill in the username field");
-        speechToText();
-        return;
+        // speechToText();
+        return false;
     } else if (
-        username.toLowerCase() === 'client' ||
-        username.toUpperCase() === 'CLIENT'
+        (username.toLowerCase() === 'client' ||
+        username.toUpperCase() === 'CLIENT')&&(password.toLowerCase() === 'client' ||
+        password.toUpperCase() === 'CLIENT')
   ) {
     isValidClient = true;
   } else if (
-    username.toLowerCase() === 'banker' ||
-    username.toUpperCase() === 'BANKER'
+    (username.toLowerCase() === 'banker' ||
+    username.toUpperCase() === 'BANKER')&&(password.toLowerCase() === 'banker' ||
+    password.toUpperCase() === 'BANKER')
   ) {
     isValidBanker = true;
   } else if (
-    username.toLowerCase() === 'admin' ||
-    username.toUpperCase() === 'ADMIN'
+    (username.toLowerCase() === 'admin' ||
+    username.toUpperCase() === 'ADMIN')&&(password.toLowerCase() === 'admin' ||
+    password.toUpperCase() === 'ADMIN')
   ) {
     isValidAdmin = true;
   } else {
-    return;
+    sayWords("Wrong username or password");
+    var usernameInput = document.getElementById('username');
+    usernameInput.classList.add('errorInput');
+    var errorMessageElement = document.createElement('p');
+    errorMessageElement.classList.add('errormessage');
+    errorMessageElement.innerHTML = "Wrong username or password";
+    var existingErrorMessage = usernameInput.parentNode.querySelector('.errormessage');
+    if (existingErrorMessage) {
+        existingErrorMessage.remove();
+    }
+    usernameInput.parentNode.insertBefore(errorMessageElement, usernameInput.nextSibling);
+    return false;
   }
 
 
     if (!isValidPassword) {
         sayWords("Please fill in the password field");
-        speechToText();
-        return;
+        // speechToText();
+        return false;
     }
    
 
@@ -108,29 +122,29 @@ function handleSubmit(event) {
     // }
 
     if(isValidClient===true){
-    window.open("../clientHome/clientHome.html");
-    window.close("../login/loginPage.html");
+    window.open("../clientHome/clientHome.html", "_self");
+    window.close("../login/loginPage.html", "_self");
 
     return true;
 }else if(isValidBanker===true){
-    window.open("../bankerHome/bankerHome.html");
-    window.close("../login/loginPage.html");
+    window.open("../Banker/BankerHomePage.html", "_self");
+    window.close("../login/loginPage.html", "_self");
 
     return true;
 }else if(isValidAdmin===true) {
-    window.open("../adminHome/adminHome.html");
-    window.close("../login/loginPage.html");
+    window.open("../adminHome/adminHome.html", "_self");
+    window.close("../login/loginPage.html", "_self");
 
     return true;
 }
 else{
-    return ;
+    return;
 }
 }
 
 
 function myregister() {
-    window.open("../registerPage/register.html");
+    window.open("../registerPage/register.html", "_self");
     window.close("../login/loginPage.html");
     return true;
 }
@@ -167,7 +181,7 @@ function speechToText() {
     if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
         // Create a new instance of SpeechRecognition
         var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-
+        recognition.continuous = true;
         // Start speech recognition
         recognition.start();
 
@@ -179,13 +193,13 @@ function speechToText() {
 
         // Event fired when speech recognition receives a result
         recognition.onresult = (event) => {
-            var transcript = event.results[0][0].transcript;
+            var transcript = event.results[event.results.length - 1][0].transcript;
             console.log(transcript);
 
 
             // Regular expressions to match username and password patterns
-            var usernameRegex = /(?:my\s)?username\s(?:is|should\sbe)?\s([\w\s]+)/i;
-            var passwordRegex = /(?:my\s)?password\s(?:is|should\sbe)?\s([\w\s]+)/i;
+            var usernameRegex = /(?:the\s)?user name\s(?:is|should\sbe)?\s(\w+)/i;
+            var passwordRegex = /(?:the\s)?password\s(?:is|should\sbe)?\s(\w+)/i;
 
 
             // Extract username and password using regular expressions
