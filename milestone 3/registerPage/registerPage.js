@@ -1,11 +1,15 @@
 function validateField(fieldName) {
-    var fieldValue = document.getElementById(fieldName).value;
+    var fieldValue = fieldName == 'checkbox' ? document.getElementById(fieldName).checked : document.getElementById(fieldName).value;
     if (!fieldValue) {
         var fieldInput = document.getElementById(fieldName);
         fieldInput.classList.add('errorInput');
         var errorMessageElement = document.createElement('p');
         errorMessageElement.classList.add('errormessage');
-        errorMessageElement.innerHTML = "Please fill in the " + fieldName + " field";
+        if (fieldName == 'checkbox') {
+            errorMessageElement.innerHTML = "Please agree to the terms and conditions";
+        } else {
+            errorMessageElement.innerHTML = "Please fill in the " + fieldName + " field";
+        }
         var existingErrorMessage = fieldInput.parentNode.querySelector('.errormessage');
         if (existingErrorMessage) {
             existingErrorMessage.remove();
@@ -32,49 +36,61 @@ function handleSubmit(event) {
     var isValidPhoneNumber = validateField('phoneNumber');
     var isValidEmail = validateField('email');
     var isValidAddress = validateField('address');
-    var isValidDateBirth = validateField('dateBirth');
+    var isValidCountry = validateField('country');
+    var isValidCurrency = validateField('currency');
+    var isValidAccountType = validateField('accounttype');
+    var isValidCheckbox = validateField('checkbox');
+    // var isValidDateBirth = validateField('dateBirth');
     
     if(!isValidFullname){
         sayWords("Please fill in the fullname field");
-        speechToText();
         return
     }
     if (!isValidUsername) {
         sayWords("Please fill in the username field");
-        speechToText();
         return
     }
 
     if (!isValidPassword) {
         sayWords("Please fill in the password field");
-        speechToText();
         return
     }
     if (!isValidNationalID) {
         sayWords("Please fill in the National ID field");
-        speechToText();
         return
     }
     if (!isValidPhoneNumber) {
         sayWords("Please fill in the Phone Number field");
-        speechToText();
         return
     }
     if (!isValidEmail) {
         sayWords("Please fill in the Email field");
-        speechToText();
         return
     }
     if (!isValidAddress) {
         sayWords("Please fill in the Address field");
-        speechToText();
         return
     }
-    if (isValidDateBirth) {
-        sayWords("Please fill in the Date Birth field");
-        speechToText();
+    if (!isValidCountry) {
+        sayWords("Please fill in the country field");
         return
     }
+    if (!isValidAccountType) {
+        sayWords("Please fill in the account type field");
+        return
+    }
+    if (!isValidCurrency) {
+        sayWords("Please fill in the currency field");
+        return
+    }
+    if (!isValidCheckbox) {
+        sayWords("Please agree to the terms and conditions");
+        return
+    }
+    // if (!isValidDateBirth) {
+    //     sayWords("Please fill in the Date Birth field");
+    //     return
+    // }
     
 
     var password = document.getElementById('password').value;
@@ -96,12 +112,16 @@ function handleSubmit(event) {
         return false;
     }
     
-    window.open("../loginPage/loginPage.html");
+    window.open("../login/loginPage.html");
     return true;
 }
 if (localStorage.getItem('isBlind')) {
-    speechToText();
-}
+    const url = window.location.href;
+    if (url.includes("registerPage")) {
+      // The word "PayBill" is in the URL.
+      speechToTextResgister();
+    }
+    }
 function sayWords(msgText) {
     if (!localStorage.getItem('isBlind')) {
         return;
@@ -126,24 +146,24 @@ function stopTextToSpeech() {
         }
     }
 }
-function speechToText() {
+function speechToTextResgister() {
     // Check if the browser supports the SpeechRecognition API
     if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
         // Create a new instance of SpeechRecognition
         var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-
+        recognition.continuous = true;
         // Start speech recognition
         recognition.start();
 
         // Event fired when speech recognition starts
         recognition.onstart = ()=> {
-            document.getElementById("sound-input").style.display = "inline-block";
+            // document.getElementById("sound-input").style.display = "inline-block";
             console.log("Speech recognition started");
         };
 
         // Event fired when speech recognition receives a result
         recognition.onresult = (event) => {
-            var transcript = event.results[0][0].transcript;
+            var transcript = event.results[event.results.length - 1][0].transcript;
             console.log(transcript);
 
 
@@ -151,11 +171,13 @@ function speechToText() {
             var fullnameRegex=/(?:my\s)?full name\s(?:is|should\sbe)?\s([\w\s]+)/i;
             var usernameRegex = /(?:my\s)?username\s(?:is|should\sbe)?\s([\w\s]+)/i;
             var passwordRegex = /(?:my\s)?password\s(?:is|should\sbe)?\s([\w\s]+)/i;
-            var nationalIDRegex=/(?:my\s)?national ID\s(?:is|should\sbe)?\s([\w\s]+)/i;
-            var phoneNumberRegex=/(?:my\s)?phone number\s(?:is|should\sbe)?\s([\w\s]+)/i;
+            var nationalIDRegex=/(?:my\s)?national ID\s(?:is|should\sbe)?\s(\d+(\.\d+)?)/i;
+            var phoneNumberRegex=/(?:my\s)?phone number\s(?:is|should\sbe)?\s(\d+(\.\d+)?)/i;
             var emailRegex=/(?:my\s)?email\s(?:is|should\sbe)?\s([\w\s]+)/i;
             var addressRegex=/(?:my\s)?address\s(?:is|should\sbe)?\s([\w\s]+)/i;
-            var dateBirthRegex=/(?:my\s)?date Birth\s(?:is|should\sbe)?\s([\w\s]+)/i;
+            var countryRegex=/(?:my\s)?country\s(?:is|should\sbe)?\s([\w\s]+)/i;
+            var typeRegex=/(?:my\s)?type\s(?:is|should\sbe)?\s([\w\s]+)/i;
+            var currencyRegex=/(?:my\s)?currency\s(?:is|should\sbe)?\s([\w\s]+)/i;
 
             // Extract username and password using regular expressions
             var fullnameMatch = transcript.match(fullnameRegex);
@@ -165,9 +187,11 @@ function speechToText() {
             var phoneNumberMatch = transcript.match(phoneNumberRegex);
             var emailMatch = transcript.match(emailRegex);
             var addressMatch = transcript.match(addressRegex);
-            var dateBirthMatch = transcript.match(dateBirthRegex);
+            var countryMatch=transcript.match(countryRegex);
+            var typeMatch=transcript.match(typeRegex);
+            var currencyMatch=transcript.match(currencyRegex);
            // -------------------------------------------------------------------------------------/
-
+ 
             if (fullnameMatch && fullnameMatch[1]) {
                 var fullname = fullnameMatch[1];
                 var fullnameField = document.getElementById("fullname");
@@ -176,37 +200,48 @@ function speechToText() {
 
             if (usernameMatch && usernameMatch[1]) {
                 var username = usernameMatch[1];
-                document.getElementById("username").value = username;
+                document.getElementById("username").value =username;
             }
             if (passwordMatch && passwordMatch[1]) {
                 var password = passwordMatch[1];
-                document.getElementById("password").value = password;
+                document.getElementById("password").value =password;
             }
             if (nationalIDMatch && nationalIDMatch[1]) {
                 var  nationalID= nationalIDMatch[1];
-                document.getElementById("nationalID").value = nationalID;
+                document.getElementById("nationalID").value =nationalID;
             }
             if (phoneNumberMatch && phoneNumberMatch[1]) {
                 var  phoneNumber= phoneNumberMatch[1];
-                document.getElementById("phoneNumber").value = phoneNumber;
+                document.getElementById("phoneNumber").value =phoneNumber;
             }
             if (emailMatch && emailMatch[1]) {
                 var  email= emailMatch[1];
-                document.getElementById("email").value = email;
+                document.getElementById("email").value =email;
             }
             if (addressMatch && addressMatch[1]) {
                 var  address= addressMatch[1];
-                document.getElementById("address").value = address;
+                document.getElementById("address").value =address;
             }
-            if (dateBirthMatch && dateBirthMatch[1]) {
-                var  dateBirth= dateBirthMatch[1];
-                document.getElementById("dateBirth").value = dateBirth;
+            if (countryMatch && countryMatch[1]) {
+                var country= countryMatch[1];
+                document.getElementById("country").value =country;
             }
+            if (typeMatch && typeMatch[1]) {
+                var type= typeMatch[1];
+                document.getElementById("accounttype").value =type;
+            }
+            if (currencyMatch && currencyMatch[1]) {
+                var currency= currencyMatch[1];
+                document.getElementById("currency").value =currency;
+            }
+
+
+
         };
 
         // Event fired when speech recognition ends
         recognition.onend = () => {
-            document.getElementById("sound-input").style.display = "none";
+            // document.getElementById("sound-input").style.display = "none";
             console.log("Speech recognition ended");
         };
 
