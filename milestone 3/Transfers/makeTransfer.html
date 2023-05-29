@@ -25,8 +25,9 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.8/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.8/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="../style.css" />
-    <script src="../Transfers/transfers.js"></script>
 
   </head>
   <body>
@@ -424,7 +425,7 @@
               <div class="col-12">
                 <br>
                 <button
-                onclick="myFunc2()"
+                id="alert-id"
                 class="mt-3 btn themed-btn-outlined"
                   type="submit"
                   onmouseenter="sayWords('make transfer')" onmouseout="stopTextToSpeech()" >
@@ -455,5 +456,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../script.js"></script>
+    <script src="../Transfers/transfers.js"></script>
   </body>
 </html>

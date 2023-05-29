@@ -1,31 +1,45 @@
 //-------- Pay Bill ---------//
-function myFunc1() {
+const button1 = document.getElementById("alert-id");
+button1.addEventListener("click", myFunc1, false);
 
+function myFunc1(event) {
+  // add the next line
+  event.preventDefault();
+        
   let accountNumber = document.getElementById("accountNumber").value
   let amount = document.getElementById("amount").value
   let recieverName = document.getElementById("recieverName").value
 
   if (accountNumber !== "" && amount !== "" && recieverName !== "") {
-
-    alert("Succesfull");
-    saywords("successful");
-    window.open("../clientHome/clientHome.html");
-    window.close("../Bills/PayBill.html");
-
-
+    // add the next 4 lines
+    Swal.fire({
+      title: 'succesfull!',
+      icon: 'success',
+      confirmButtonColor: '#850F0F'
+    })
+    sayWords("succesfull");
+    // remove the next 2 lines
+    // window.open("../clientHome/clientHome.html");
+    // window.close("../Bills/AddBill.html");
   }
   else {
-    sayWords("Invalid data");
-    alert("Invalid Data");
-
+    // add the next 4 lines
+    Swal.fire({
+      title: 'invalid data!',
+      icon: 'error',
+      confirmButtonColor: '#850F0F'
+    })
+    sayWords("invalid data");
   }
 
 }
 
-
 //-------- Make Transfer ---------//
+const button2 = document.getElementById("alert-id");
+button2.addEventListener("click", myFunc2, false);
 
-function myFunc2() {
+function myFunc2(event) {
+  event.preventDefault();
 
   let senderAccountNumber = document.getElementById("senderAccountNumber").value
   let recieverAccountNumber = document.getElementById("recieverAccountNumber").value
@@ -34,20 +48,21 @@ function myFunc2() {
   let bankName = document.getElementById("bankName").value
   let purpose = document.getElementById("purpose").value
 
-
-
   if (senderAccountNumber !== "" && recieverAccountNumber !== "" && amount !== "" && recieverName !== "" && bankName !== "" && purpose !== "") {
-
-    alert("Succesfull");
-    saywords("successful");
-    window.open("../clientHome/clientHome.html");
-    window.close("../Tranfers/makeTransfer.html");
-
-
+    Swal.fire({
+      title: 'succesfull!',
+      icon: 'success',
+      confirmButtonColor: '#850F0F'
+    })
+    sayWords("succesfull");
   }
   else {
-    sayWords("Invalid data");
-    alert("Invalid Data");
+    Swal.fire({
+      title: 'invalid data!',
+      icon: 'error',
+      confirmButtonColor: '#850F0F'
+    })
+    sayWords("invalid data");
 
   }
 
@@ -56,7 +71,10 @@ function myFunc2() {
 
 
 //-------- Make Transfer Abroad ----------/
-function myFunc3() {
+const button3 = document.getElementById("alert-id");
+button3.addEventListener("click", myFunc3, false);
+function myFunc3(event) {
+  event.preventDefault();
 
   let senderAccountNumber = document.getElementById("senderAccountNumber").value
   let ibanNumber = document.getElementById("ibanNumber").value
@@ -67,16 +85,22 @@ function myFunc3() {
 
 
   if (senderAccountNumber !== "" && ibanNumber !== "" && amount !== "" && bankName !== "" && purpose !== "") {
-    sayWords("Succesfull");
-    alert("Succesfull");
-    window.open("../clientHome/clientHome.html");
-    window.close("../Tranfers/makeTransferAbroad.html");
+    Swal.fire({
+      title: 'succesfull!',
+      icon: 'success',
+      confirmButtonColor: '#850F0F'
+    })
+    sayWords("succesfull");
 
 
   }
   else {
-    sayWords("invalid data")
-    alert("Invalid Data");
+    Swal.fire({
+      title: 'invalid data!',
+      icon: 'error',
+      confirmButtonColor: '#850F0F'
+    })
+    sayWords("invalid data");
 
   }
 

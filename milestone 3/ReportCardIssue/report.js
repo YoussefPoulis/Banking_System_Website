@@ -1,19 +1,27 @@
-function myFunc1() {
+const button = document.getElementById("alert-id");
+button.addEventListener("click", myFunc4, false);
 
-    let creditCardNumber = document.getElementById("creditcardnumber").value
+function myFunc4(event) {
+	event.preventDefault();
 
+	let creditCardNumber = document.getElementById("creditcardnumber").value
 
-    if (creditCardNumber !== "" ) {
-
-        alert("Succesfull");
-        window.open("../clientHome/clientHome.html");
-        window.close("../ReportCardIssue/report.html");
-
-
-    }
-    else {
-        alert("Please enter credit card number");
-
-    }
+	if (creditCardNumber !== "" ) {
+		Swal.fire({
+			title: 'succesfull!',
+			icon: 'success',
+			confirmButtonColor: '#850F0F'
+		})
+		sayWords("succesfull");
+	}
+	else {
+		// add the next 4 lines
+		Swal.fire({
+			title: 'invalid data!',
+			icon: 'error',
+			confirmButtonColor: '#850F0F'
+		})
+		sayWords("invalid data");
+	}
 
 }

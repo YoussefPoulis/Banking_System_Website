@@ -25,8 +25,10 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.8/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.8/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="./styleOpen.css" />
-    <script src="./scriptOpen.js"></script>
+    <link rel="stylesheet" href="../style.css">
   </head>
   <body>
     <div class="wrapper">
@@ -307,7 +309,7 @@
             <h3>Open New Acount</h3>
           </div>
           <div
-            class="page-content"
+            class="page-content mb-4"
             style="background-color: #fff; padding: 15px; border-radius: 5px"
           >
             <div class="mb-3">
@@ -361,6 +363,7 @@
                 <option selected disabled value="">Choose...</option>
                 <option value="1">Saving</option>
                 <option value="2">Salary</option>
+                <option value="3">Deposit</option>
               </select>
             </div>
             <div class="curency">
@@ -377,16 +380,11 @@
                 <option value="6">Franc</option>
               </select>
               <div class="col-12">
-                <br />
-                <br />
-
                 <button
-                  onclick="myFunc()"
-                  class="btn btn-success"
-                  type="submit"
-                  style="background-color: #850f0f"
-                >
-                  Submit
+                  id="alert-id"
+                  class="mt-3 btn themed-btn-outlined"
+                  type="submit">
+                  submit
                 </button>
               </div>
             </div>
@@ -412,6 +410,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="./scriptOpen.js"></script>
     <script src="../script.js"></script>
   </body>
 </html>

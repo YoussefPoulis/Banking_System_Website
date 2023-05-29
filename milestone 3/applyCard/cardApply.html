@@ -25,8 +25,10 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.8/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.8/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="./styleCard.css" />
-    <script src="./scriptCard.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -370,24 +372,13 @@
               />
             </div>
             <div>
-              <label for="formGroupExampleInput2" class="form-label"
-                >card Type</label
-              >
-              <select class="form-select" aria-label="Default select example">
-                <option selected disabled value="">Choose...</option>
-                <option value="1">Credit</option>
-                <option value="2">Depit</option>
-              </select>
               <div class="col-12">
-                <br />
-                <br />
-
                 <button
-                  onclick="myFunc()"
-                  class="btn btn-success"
-                  type="submit"
-                  style="background-color: #850f0f"
-                >
+                    id="alert-id"
+                    class="btn themed-btn-outlined"
+                    type="submit"
+                    style="margin-top: 20px;"
+                  >
                   Submit
                 </button>
               </div>
@@ -415,5 +406,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../script.js"></script>
+    <script src="./scriptCard.js"></script>
   </body>
 </html>
