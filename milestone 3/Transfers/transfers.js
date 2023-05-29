@@ -83,27 +83,38 @@ function myFunc3() {
 }
 
 //-------- Adding Bill ----------/
-function myFunc4() {
+// add the next 2 lines (make the id of the html button alert-id)
+const button = document.getElementById("alert-id");
+button.addEventListener("click", myFunc4, false);
 
+function myFunc4(event) {
+  // add the next line
+  event.preventDefault();
+        
   let accountNumber = document.getElementById("accountNumber").value
   let amount = document.getElementById("amount").value
   let recieverName = document.getElementById("recieverName").value
 
-
-
   if (accountNumber !== "" && amount !== "" && recieverName !== "") {
+    // add the next 4 lines
+    Swal.fire({
+      title: 'succesfull!',
+      icon: 'success',
+      confirmButtonColor: '#850F0F'
+    })
     sayWords("succesfull");
-    alert("succesfull");
-    
-    window.open("../clientHome/clientHome.html");
-    window.close("../Bills/AddBill.html");
-
-
+    // remove the next 2 lines
+    // window.open("../clientHome/clientHome.html");
+    // window.close("../Bills/AddBill.html");
   }
   else {
+    // add the next 4 lines
+    Swal.fire({
+      title: 'invalid data!',
+      icon: 'error',
+      confirmButtonColor: '#850F0F'
+    })
     sayWords("invalid data");
-    alert("Invalid Data");
-     
   }
 
 }
