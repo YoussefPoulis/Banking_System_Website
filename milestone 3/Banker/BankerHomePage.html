@@ -26,6 +26,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../style.css" />
+    <script src="../clientHome/clientHome.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -98,42 +99,18 @@
       <!-- Page Content  -->
       <div id="content">
         <!-- top navbar -->
-        <div
-          class="top-bar container-fluid d-flex align-items-center justify-content-between"
-        >
+        <div class="top-bar container-fluid d-flex align-items-center justify-content-between">
           <div>
-            <button
-              type="button"
-              id="sidebarCollapse"
-              class="btn"
-              style="color: #fff"
-            >
-              <i class="fa-solid fa-bars fa-xl"></i>
-            </button>
+              <button type="button" id="sidebarCollapse" class="btn" style="color:#fff"><i class="fa-solid fa-bars fa-xl"></i></button>
           </div>
           <div class="navbar navbar-expand">
-            <ul class="navbar-nav mr-auto">
-              <li class="m-3">
-                <a href="#"
-                  ><i
-                    class="fa-regular fa-calendar-days fa-xl"
-                    style="color: #fff"
-                  ></i
-                ></a>
-              </li>
-              <li class="m-3">
-                <a href="#"
-                  ><i class="fa-regular fa-bell fa-xl" style="color: #fff"></i
-                ></a>
-              </li>
-              <li class="m-3">
-                <a href="#"
-                  ><i class="fa-solid fa-gear fa-xl" style="color: #fff"></i
-                ></a>
-              </li>
-            </ul>
+              <ul class="navbar-nav mr-auto popover-wrapper" >
+                
+                  <!-- Settings -->
+                  <li class="m-3"><a href="#"><i class="fa-solid fa-right-from-bracket fa-xl" style="color: #ffffff;"></i></a></li>
+              </ul>
           </div>
-        </div>
+      </div>
         <!-- main content -->
         <div class="main-content container-fluid">
           <!-- page header -->
@@ -145,9 +122,22 @@
             <!-- ****************************************************************************************************************** -->
             <!-- remove the next lines and put your content here -->
       
-            <div style="background-color: #fff; width:min-content; padding: 20px; border-radius: 10px;">
-              <h4 style="padding: 20px;">Working Hours Per Month</h4>
-            <img style="width: 500px;" src="../public/graph2.png" alt=""></div>
+            <div class="col-12 col-md-6">
+              <div class="col-12 d-flex flex-row">
+                  <div class="card mt-4 mb-4 flex-fill" style="width: 18rem;">
+                      <div class="card-header text-center" style="background-color: white;">
+                          Announcements
+                      </div>
+                      <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><strong>New Branch: </strong>We are delighted to open a new branch in Maadi. This branch will provide convenient banking services to the local community and support economic growth in the area.</li>
+                          <li class="list-group-item"><strong>New credit card: </strong>We are pleased to announce the launch of our latest "Platinum" credit card, offering enhanced rewards and exclusive benefits for our valued customers.</li>
+                          <li class="list-group-item"><strong> Holiday</strong> Holiday starting 1/6/2023 to 4/6/2023</li>
+
+                          <li class="list-group-item"><strong>Security Enhancements: </strong>We have implemented advanced security measures to protect our customers' financial information and ensure the highest level of data privacy.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
             <!-- till here -->
             <!-- ****************************************************************************************************************** -->
           </div>

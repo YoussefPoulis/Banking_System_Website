@@ -124,9 +124,6 @@ ul ul a {
     color: #fff;
 }
 
-.page-content {
-
-}
 
 .themed-btn-outlined {
     color: #850F0F;
@@ -138,7 +135,17 @@ ul ul a {
     background-color: #850F0F;
 }
 
+.top-nav {
+    color: #fff;
+}
 
+.top-nav-link {
+    color: #EBE7Df;
+}
+
+.top-nav-link:hover {
+    text-decoration: underline;
+}
 
 /* ---------------------------------------------------
     MEDIAQUERIES
@@ -177,7 +184,7 @@ tr:hover{
 }
 
 /*---------------------------------------------------
-    TRANSFER FORM
+    Notifications / Reminders
     -------------------------------------------------*/
 
 .popover-content {

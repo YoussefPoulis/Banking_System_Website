@@ -145,6 +145,7 @@ else{
 
 function myregister() {
     window.open("../registerPage/register.html", "_self");
+    window.close("../login/loginPage.html");
     return true;
 }
 
