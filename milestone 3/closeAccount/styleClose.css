@@ -114,8 +114,9 @@ ul ul a {
 
 .main-content{
     width: 90%;
-    margin-top: 7rem;
+    margin-top: 3rem;
     padding: 0 1.5rem;
+    padding-bottom: 30px;
     /* background-color: pink; */
 }
 
