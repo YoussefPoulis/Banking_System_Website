@@ -37,11 +37,11 @@ function handleSubmit(event) {
     var isValidEmail = validateField('email');
     var isValidAddress = validateField('address');
     var isValidCountry = validateField('country');
-    var isValidCurrency = validateField('currency');
-    var isValidAccountType = validateField('accounttype');
+   // var isValidCurrency = validateField('currency');
+    //var isValidAccountType = validateField('accounttype');
     var isValidCheckbox = validateField('checkbox');
     var isValidnew=validateField('new');
-    var  isvalidaccountnumber=validateField('accountnumber');
+    //var  isvalidaccountnumber=validateField('accountnumber');
     
     // var isValidDateBirth = validateField('dateBirth');
     
@@ -78,22 +78,22 @@ function handleSubmit(event) {
         sayWords("Please fill in the country field");
         return
     }
-    if (!isValidAccountType) {
-        sayWords("Please fill in the account type field");
-        return
-    }
-    if (!isValidCurrency) {
-        sayWords("Please fill in the currency field");
-        return
-    }
+    // if (!isValidAccountType) {
+    //     sayWords("Please fill in the account type field");
+    //     return
+    // }
+    // if (!isValidCurrency) {
+    //     sayWords("Please fill in the currency field");
+    //     return
+    // }
     if (!isValidCheckbox) {
         sayWords("Please agree to the terms and conditions");
         return
     }
-    if (!isvalidaccountnumber) {
-        sayWords("Please agree to the terms and conditions");
-        return
-    }
+    // if (!isvalidaccountnumber) {
+    //     sayWords("Please agree to the terms and conditions");
+    //     return
+    // }
     if(!isValidnew){
         sayWords("Please fill this field");
         return
@@ -123,7 +123,9 @@ function handleSubmit(event) {
         return false;
     }
     
+    window.close('../registerPage/register.html');
     window.open("../login/loginPage.html");
+    
     return true;
 }
 if (localStorage.getItem('isBlind')) {
@@ -275,6 +277,24 @@ function speechToTextResgister() {
     }
 }
 function openPage(){
+    window.close('../registerPage/register.html');
     window.open('../login/loginPage.html');
+    
     return true;
+}
+
+
+function change() {
+    if (document.getElementById("new").value == "existinguser") {
+        document.getElementById("ex").style.display = "block"
+        document.getElementById("new2").style.display = "none"
+        document.getElementById("new1").style.display = "none"
+
+    }
+    else {
+        document.getElementById("ex").style.display = "none"
+        document.getElementById("new1").style.display = "block"
+        document.getElementById("new2").style.display = "block"
+    }
+
 }

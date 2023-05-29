@@ -56,16 +56,16 @@
                               </div>
                               <div class="row">
                                 <label  type="text" name="new" id="New" class="form__input" placeholder="choose" onmouseenter="sayWords('n')" onmouseout="stopTextToSpeech()">
-                                <select  id="new"  class="form-select"  onmouseenter="sayWords('choose from new user or existing user')" onmouseout="stopTextToSpeech()" >
+                                <select  id="new" onchange="change()" class="form-select"  onmouseenter="sayWords('choose from new user or existing user')" onmouseout="stopTextToSpeech()" >
                                     <option selected disabled value="" >New</option>
-                                     <option value="newuser">newuser</option>
-                                     <option value="existing user">existing user</option>
+                                     <option value="newuser">New User</option>
+                                     <option value="existinguser">Existing User</option>
                                    </select>
                              </div>
-                             <div class="row">
+                             <div class="row" id="ex" style="display:none">
                               <input  type="number" name="accountnumber" id="accountnumber" class="form__input" placeholder="account number" onmouseenter="sayWords('account numberfield')" onmouseout="stopTextToSpeech()">
                             </div>
-                              <div class="row">
+                              <div class="row" id="new1" style="display:none">
                                 <label  type="text" name="AccountType"  class="form__input" placeholder="AccountType" onmouseenter="sayWords('account type field')" onmouseout="stopTextToSpeech()">
                                 <select  id="accounttype"  class="form-select"  onmouseenter="sayWords('choose from saving and salary and deposite')" onmouseout="stopTextToSpeech()" >
                                    <option selected disabled value="" >AccountType</option>
@@ -75,7 +75,7 @@
                                   </select>
                               </div>
                              
-                             <div class="row">
+                             <div class="row" id="new2" style="display:none">
                               <label  type="text" name="Currency" id="Currency" class="form__input" placeholder="Currency" onmouseenter="sayWords('')" onmouseout="stopTextToSpeech()">
                               <select  id="currency"  class="form-select"  onmouseenter="sayWords('choose from euro or pound or Dollar or deposite')" onmouseout="stopTextToSpeech()" >
                                   <option selected disabled value="" >currency</option>
