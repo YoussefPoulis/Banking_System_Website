@@ -27,6 +27,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../style.css" />
+    <script src="./scriptAcc.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -99,42 +100,18 @@
       <!-- Page Content  -->
       <div id="content">
         <!-- top navbar -->
-        <div
-          class="top-bar container-fluid d-flex align-items-center justify-content-between"
-        >
+        <div class="top-bar container-fluid d-flex align-items-center justify-content-between">
           <div>
-            <button
-              type="button"
-              id="sidebarCollapse"
-              class="btn"
-              style="color: #fff"
-            >
-              <i class="fa-solid fa-bars fa-xl"></i>
-            </button>
+              <button type="button" id="sidebarCollapse" class="btn" style="color:#fff"><i class="fa-solid fa-bars fa-xl"></i></button>
           </div>
           <div class="navbar navbar-expand">
-            <ul class="navbar-nav mr-auto">
-              <li class="m-3">
-                <a href="#"
-                  ><i
-                    class="fa-regular fa-calendar-days fa-xl"
-                    style="color: #fff"
-                  ></i
-                ></a>
-              </li>
-              <li class="m-3">
-                <a href="#"
-                  ><i class="fa-regular fa-bell fa-xl" style="color: #fff"></i
-                ></a>
-              </li>
-              <li class="m-3">
-                <a href="#"
-                  ><i class="fa-solid fa-gear fa-xl" style="color: #fff"></i
-                ></a>
-              </li>
-            </ul>
+              <ul class="navbar-nav mr-auto popover-wrapper" >
+                
+                  <!-- Settings -->
+                  <li class="m-3"><a href="#"><i class="fa-solid fa-right-from-bracket fa-xl" style="color: #ffffff;"></i></a></li>
+              </ul>
           </div>
-        </div>
+      </div>
         <!-- main content -->
         <div class="main-content container-fluid">
           <!-- page header -->
@@ -156,12 +133,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr id="one">
                     <td>30/05/2023</td>
                     <td> Mahmoud Elkhatib</td>
 
                     <td style="color:saddlebrown;">lost</td>
-                    <td> <button
+                    <td> <button onclick=Replace("one");
                         class="btn btn-success"
                         type="submit"
                         style="background-color: rgb(0, 136, 255);"
@@ -173,12 +150,13 @@
 
         
                   </tr>
-                  <tr>
+                  <tr id="two">
                     <td>01/06/2023</td>
                     <td>Hossam Hassan</td>
 
                     <td style="color:blue;"> damaged</td>
                     <td> <button
+                      onclick=Replace("two");
                         class="btn btn-success"
                         type="submit"
                         style="background-color: rgb(0, 136, 255);"
@@ -188,12 +166,13 @@
                     </td>
             
                   </tr>
-                  <tr>
+                  <tr id="three">
                     <td>03/06/2023</td>
                     <td> Ali Maloul</td>
 
                     <td style="color:red;"> stolen</td>
                     <td> <button
+                      onclick=Replace("three")
                         class="btn btn-success"
                         type="submit"
                         style="background-color: rgb(0, 136, 255);"
@@ -204,12 +183,13 @@
 
        
                   </tr>
-                  <tr>
+                  <tr id="four">
                     <td>04/06/2023</td>
                     <td>Mahmoud wahid</td>
 
                     <td style="color:red;">stolen</td>
                     <td> <button
+                      onclick=Replace("four")
                         class="btn btn-success"
                         type="submit"
                         style="background-color: rgb(0, 136, 255);"
@@ -219,12 +199,13 @@
                     </td>
        
                   </tr>
-                  <tr>
+                  <tr id="five">
                     <td>08/06/2023</td>
                     <td>Dina elsherbiny</td>
 
                     <td style="color:saddlebrown;">lost</td>
                     <td> <button
+                      onclick=Replace("five")
                         class="btn btn-success"
                         type="submit"
                         style="background-color: rgb(0, 136, 255);"
@@ -234,12 +215,13 @@
                     </td>
          
                   </tr>
-                  <tr>
+                  <tr id="six">
                     <td>15/06/2023</td>
                     <td>Mohamed Hany</td>
 
                     <td style="color:saddlebrown;">lost</td>
                     <td> <button
+                      onclick=Replace("six")
                         class="btn btn-success"
                         type="submit"
                         style="background-color: rgb(0, 136, 255);"
@@ -249,13 +231,14 @@
                     </td>
       
                   </tr>
-                  <tr>
+                  <tr id="seven">
                     <td>01/07/2023</td>
                     <td> Hassan Shakoush</td>
 
                     <td style="color:blue;">damaged</td>
        
                     <td> <button
+                      onclick=Replace("seven")
                         class="btn btn-success"
                         type="submit"
                         style="background-color: rgb(0, 136, 255);"

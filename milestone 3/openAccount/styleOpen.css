@@ -105,6 +105,7 @@ ul ul a {
     width: 100%;
     min-height: 100vh;
     transition: all 0.3s;
+    
 }
 
 .top-bar {
@@ -114,7 +115,7 @@ ul ul a {
 
 .main-content{
     width: 90%;
-    margin-top: 7rem;
+    margin-top: 3rem;
     padding: 0 1.5rem;
     /* background-color: pink; */
 }
