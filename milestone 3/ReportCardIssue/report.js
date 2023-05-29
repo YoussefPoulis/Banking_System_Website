@@ -1,9 +1,9 @@
 function myFunc1() {
 
     let creditCardNumber = document.getElementById("creditcardnumber").value
+    let description = document.getElementById("description").value
 
-
-    if (creditCardNumber !== "" ) {
+    if (creditCardNumber !== "" && description!=="") {
 
         alert("Succesfull");
         window.open("../clientHome/clientHome.html");
@@ -12,7 +12,7 @@ function myFunc1() {
 
     }
     else {
-        alert("Please enter credit card number");
+        alert("Please enter all fields");
 
     }
 

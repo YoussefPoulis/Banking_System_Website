@@ -20,7 +20,7 @@
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style.css" />
-    <script src="../ReportCardIssue/report.js"></script>
+    <script src="../PayCreditCard/payCard.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -231,49 +231,37 @@
             <div class="main-content container-fluid">
                 <!-- page header -->
                 <div class="page-header">
-                    <h3>Report an issue</h3>
+                    <h3>Pay Credit Card</h3>
+                    <p class="top-nav">
+                        <a class="top-nav-link" href="../ViewCards/viewCards.html">My Credit Cards</a>  /
+                        <a class="top-nav-link" href="../ViewCards/visaDetails.html">Credit Card Details</a>
+                        / <strong>Pay Credit Card</strong>
+                    </p>
                 </div>
                 <!-- page content -->
                 <div class="page-content">
                     <!-- ****************************************************************************************************************** -->
                     <!-- remove the next lines and put your content here -->
                     <form class="row g-3 needs-validation" novalidate id="transferForm">
-                        <div class="col-md-4">
-                            <label for="validationCustom01" class="form-label">Credit Card Number</label>
+
+                        <div class="col-12">
+                            <label for="validationCustom02" class="form-label"> Payment Type</label>
+                            <select class="form-select" id="validationCustom04" required onselect="change()">
+                                <option selected disabled value="">Choose...</option>
+                                <option>Full</option>
+                                <option id="partial">Partial</option>
+                            </select>
+                        </div>
+
+
+                        <div class="col-12" style="display:none" id="me">
+                            <label for="validationCustom03" class="form-label">
+                                Amount
+                            </label>
                             <input type="number"
                                    class="form-control"
-                                   id="creditcardnumber"
-                                   placeholder="XXXX-XXXX-XXXX-XXXX"
-                                   required />
-                        </div>
-
-                        <div class="col-md-4">
-                            <label for="validationCustom02" class="form-label">Type</label>
-                            <select class="form-select" id="validationCustom04" required>
-                                <option selected disabled value="">Choose...</option>
-                                <option>Theft</option>
-                                <option>Loss</option>
-                                <option>Damage</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label for="validationCustomUsername" class="form-label">Replacement</label>
-                            <select class="form-select" id="validationCustom04" required>
-                                <option selected disabled value="">Do you want another card?</option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>
-                        </div>
-
-                        <div class="col">
-                            <label for="validationCustom03" class="form-label">
-                                Description
-                            </label>
-                            <input type="text"
-                                   class="form-control"
-                                   id="description"
-                                   placeholder="Ex: My card was stolen in City Stars" />
+                                   id="amount"
+                                   placeholder="Ex: $20,000" />
 
                         </div>
 
@@ -282,7 +270,7 @@
                                     class="btn btn-success"
                                     type="submit"
                                     style="background-color: #850f0f">
-                                Report Issue 
+                                Pay Credit Card
                             </button>
                         </div>
                     </form>
