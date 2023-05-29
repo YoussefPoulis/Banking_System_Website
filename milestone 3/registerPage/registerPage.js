@@ -122,9 +122,9 @@ function handleSubmit(event) {
         passwordInput.parentNode.insertBefore(errorMessageElement, passwordInput.nextSibling);
         return false;
     }
-    
-    window.close('../registerPage/register.html');
-    window.open("../login/loginPage.html");
+    window.location.href = '../login/loginPage.html';
+    // window.close('../registerPage/register.html');
+    // window.open("../login/loginPage.html");
     
     return true;
 }
@@ -277,8 +277,9 @@ function speechToTextResgister() {
     }
 }
 function openPage(){
-    window.close('../registerPage/register.html');
-    window.open('../login/loginPage.html');
+    window.location.href = '../login/loginPage.html';
+    // window.close('../registerPage/register.html');
+    // window.open('../login/loginPage.html');
     
     return true;
 }
