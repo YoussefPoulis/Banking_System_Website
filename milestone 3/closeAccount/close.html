@@ -18,115 +18,271 @@
 <body>
    
     <div class="wrapper">
-        <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <img src="../public/logo.png" alt="InstaBank" height="40px" width="40px">
-                <h4 class="m-2">instaBank</h4>
+              <img
+                src="../public/logo.png"
+                alt="InstaBank"
+                height="40px"
+                width="40px"
+                onmouseenter="sayWords('logo picture')" onmouseout="stopTextToSpeech()"/>
+              <h4 class="m-2" onmouseenter="sayWords('instabank')" onmouseout="stopTextToSpeech()">instaBank</h4>
             </div>
-
-            <ul class="list-unstyled components">
-                <div class="containder-fluid text-center">
-                    <img class="m-2" src="../public/profile.png" alt="" height="80px" width="80px">
-                    <h5 style="font-size: 15x;">Nada Labib</h5>
-                    <p style="font-size: 13px; margin-top: -10px; margin-bottom: 25px;">nada@gmail.com</p>
-                </div>
-                <li>
-                    <a href="../clientHome/clientHome.html"><i class="fa-solid fa-house" style="margin-right: 15px;"></i>Home</a>
-                </li>
     
+            <ul class="list-unstyled components">
+              <div class="containder-fluid text-center">
+                <img
+                  class="m-2"
+                  src="../public/profile.png"
+                  alt=""
+                  height="80px"
+                  width="80px"
+                  onmouseenter="sayWords(' profile picture')" onmouseout="stopTextToSpeech()"
+                />
+                <h5 style="font-size: 15x" onmouseenter="sayWords('Nada Labib')" onmouseout="stopTextToSpeech()">Nada Labib</h5>
+                <p style="font-size: 13px; margin-top: -10px; margin-bottom: 25px"onmouseenter="sayWords('nada@gmail.com')" onmouseout="stopTextToSpeech()">
+                  nada@gmail.com
+                </p>
+              </div>
+              <li>
+                <a href="../clientHome/clientHome.html"
+                onmouseenter="sayWords('home button')" onmouseout="stopTextToSpeech()"><i class="fa-solid fa-house" style="margin-right: 15px"></i
+                  >Home</a
+                >
+              </li>
+    
+              <li>
+                <a
+                  href="#applicationSubmenu"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  class="dropdown-toggle"
+                  onmouseenter="sayWords('Application dropdown button')" onmouseout="stopTextToSpeech()"><i
+                    class="fa-solid fa-file-circle-plus"
+                    style="margin-right: 10px"
+                  ></i>
+                  Applications</a
+                >
+                <ul class="collapse list-unstyled" id="applicationSubmenu">
+                  <li>
+                    <a href="../applicationHistory/applicationHistory.html"
+                    onmouseenter="sayWords('application history button')" onmouseout="stopTextToSpeech()"><i
+                        class="fa-solid fa-clock-rotate-left"
+                        style="margin-right: 15px"
+                      ></i
+                      >Application History</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../openAccount/open.html"
+                    onmouseenter="sayWords('open account button')" onmouseout="stopTextToSpeech()"><i
+                        class="fa-solid fa-folder-plus"
+                        style="margin-right: 15px"
+                      ></i
+                      >Open account</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../closeAccount/close.html"
+                    onmouseenter="sayWords('close account button')" onmouseout="stopTextToSpeech()" ><i
+                        class="fa-solid fa-folder-minus"
+                        style="margin-right: 15px"
+                      ></i
+                      >Close account</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../aplyLoan/loan.html"
+                    onmouseenter="sayWords(' apply for loan button')" onmouseout="stopTextToSpeech()"><i
+                        class="fa-solid fa-sack-dollar"
+                        style="margin-right: 15px"
+                      ></i
+                      >Apply for Loan</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../applyCard/cardApply.html"
+                    onmouseenter="sayWords('apply for credit card button')" onmouseout="stopTextToSpeech()"><i
+                        class="fa-solid fa-credit-card"
+                        style="margin-right: 15px"
+                      ></i
+                      >Apply for Credit Card</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="#cardSubmenu"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  class="dropdown-toggle"
+                  onmouseenter="sayWords('credit card droptown button')" onmouseout="stopTextToSpeech()"><i class="fa-solid fa-credit-card" style="margin-right: 15px"></i
+                  >Credit Card</a
+                >
+                <ul class="collapse list-unstyled" id="cardSubmenu">
+                  <li>
+                    <a href="../ViewCards/viewCards.html"
+                    onmouseenter="sayWords('view cards button')" onmouseout="stopTextToSpeech()"><i
+                        class="fa-solid fa-credit-card"
+                        style="margin-right: 15px"
+                      ></i
+                      >View Cards</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../CardTransactions/transactions.html"
+                    onmouseenter="sayWords('view transactions button')" onmouseout="stopTextToSpeech()"><i class="fa-solid fa-house" style="margin-right: 15px"></i
+                      >View transactions</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../ReportCardIssue/report.html"
+                    onmouseenter="sayWords(' report issue button')" onmouseout="stopTextToSpeech()" ><i
+                        class="fa-solid fa-triangle-exclamation"
+                        style="margin-right: 15px"
+                      ></i
+                      >Report card issue</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="#transferSubmTenu"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  class="dropdown-toggle"
+                  onmouseenter="sayWords('transfers droptown button')" onmouseout="stopTextToSpeech()"><i
+                    class="fa-solid fa-money-bill-transfer"
+                    style="margin-right: 15px"
+                  ></i
+                  >Transfers</a
+                >
+                <ul class="collapse list-unstyled" id="transferSubmTenu">
+                  <li>
+                    <a href="../Transfers/makeTransfer.html"
+                    onmouseenter="sayWords('make transfer button')" onmouseout="stopTextToSpeech()"><i
+                        class="fa-solid fa-money-bill-transfer"
+                        style="margin-right: 15px"
+                      ></i
+                      >Make Transfer</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../Transfers/makeTransferAbroad.html"
+                    onmouseenter="sayWords('make transfer abroad button')" onmouseout="stopTextToSpeech()" ><i
+                        class="fa-solid fa-money-bill-transfer"
+                        style="margin-right: 15px"
+                      ></i
+                      >Make Transfer (Abroad)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../Transfers/transferHistory.html"
+                    onmouseenter="sayWords('transfers history button')" onmouseout="stopTextToSpeech()" ><i
+                        class="fa-solid fa-clock-rotate-left"
+                        style="margin-right: 15px"
+                      ></i
+                      >Transfers History</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="#billsSubmTenu"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  class="dropdown-toggle"
+                  onmouseenter="sayWords('bills dropdown button')" onmouseout="stopTextToSpeech()"><i
+                    class="fa-solid fa-file-invoice-dollar"
+                    style="margin-right: 15px"
+                  ></i>
+                  Bills</a
+                >
+                <ul class="collapse list-unstyled" id="billsSubmTenu">
+                  <li>
+                    <a href="../Bills/PayBill.html"
+                    onmouseenter="sayWords('pay bill button')" onmouseout="stopTextToSpeech()"><i
+                        class="fa-solid fa-money-bill"
+                        style="margin-right: 15px"
+                      ></i
+                      >Pay bill
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../Bills/AddBill.html"
+                    onmouseenter="sayWords('add bill button')" onmouseout="stopTextToSpeech()"><i
+                        class="fa-solid fa-file-circle-plus"
+                        style="margin-right: 15px"
+                      ></i
+                      >Add bill
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../Bills/ViewBills.html"
+                    onmouseenter="sayWords('view bills button')" onmouseout="stopTextToSpeech()"><i
+                        class="fa-solid fa-file-invoice-dollar"
+                        style="margin-right: 15px"
+                      ></i
+                      >View bills</a
+                    >
+                  </li>
+                </ul>
                 <li>
-                    <a href="#applicationSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa-solid fa-file-circle-plus" style="margin-right: 10px;"></i> Applications</a>
-                    <ul class="collapse list-unstyled" id="applicationSubmenu">
-                        <li>
-                            <a href="../applicationHistory/applicationHistory.html"><i class="fa-solid fa-clock-rotate-left" style="margin-right: 15px;"></i>Application History</a>
-                        </li>
-                        <li>
-                            <a href="../openAccount/open.html"><i class="fa-solid fa-folder-plus" style="margin-right: 15px;"></i>Open account</a>
-                        </li>
-                        <li>
-                            <a href="../closeAccount/close.html"><i class="fa-solid fa-folder-minus" style="margin-right: 15px;"></i>Close account</a>
-                        </li>
-                        <li>
-                            <a href="../aplyLoan/loan.html"><i class="fa-solid fa-sack-dollar" style="margin-right: 15px;"></i>Apply for Loan</a>
-                        </li>
-                        <li>
-                            <a href="../applyCard/cardApply.html"><i class="fa-solid fa-credit-card" style="margin-right: 15px;"></i>Apply for Credit Card</a>
-                        </li>
-                    </ul>
+                  <a href="../techIssues/techIssues.html"
+                    ><i class="fa-solid fa-triangle-exclamation" style="margin-right: 15px"></i
+                    >Technical Issue</a
+                  >
                 </li>
-                <li>
-                    <a href="#cardSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa-solid fa-credit-card" style="margin-right: 15px;"></i>Credit Card</a>
-                    <ul class="collapse list-unstyled" id="cardSubmenu">
-                        <li>
-                            <a href="#"><i class="fa-solid fa-credit-card" style="margin-right: 15px;"></i>View Cards</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-house" style="margin-right: 15px;"></i>View transactions</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-gift" style="margin-right: 15px;"></i>Redeem points</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-money-bill" style="margin-right: 15px;"></i>Pay for Credit Card</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-triangle-exclamation" style="margin-right: 15px;"></i>Report issue</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#transferSubmTenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa-solid fa-money-bill-transfer" style="margin-right: 15px;"></i>Transfers</a>
-                    <ul class="collapse list-unstyled" id="transferSubmTenu">
-                        <li>
-                            <a href="../Transfers/makeTransfer.html"><i class="fa-solid fa-money-bill-transfer" style="margin-right: 15px;"></i>Make Transfer</a>
-                        </li>
-                        <li>
-                            <a href="../Transfers/makeTransferAbroad.html"
-                              ><i
-                                class="fa-solid fa-money-bill-transfer"
-                                style="margin-right: 15px"
-                              ></i
-                              >Make Transfer (Abroad)</a
-                            >
-                          </li>
-                        <li>
-                            <a href="../Transfers/transferHistory.html"><i class="fa-solid fa-clock-rotate-left" style="margin-right: 15px;"></i>Transfers History</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#billsSubmTenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa-solid fa-file-invoice-dollar" style="margin-right: 15px;"></i>  Bills</a>
-                    <ul class="collapse list-unstyled" id="billsSubmTenu">
-                        <li>
-                            <a href="../Bills/PayBill.html"><i class="fa-solid fa-money-bill" style="margin-right: 15px;"></i>Pay bill </a>
-                        </li>
-                        <li>
-                            <a href="../Bills/AddBill.html"><i class="fa-solid fa-file-circle-plus" style="margin-right: 15px;"></i>Add bill </a>
-                        </li>
-                        <li>
-                            <a href="../Bills/ViewBills.html"><i class="fa-solid fa-file-invoice-dollar" style="margin-right: 15px;"></i>View bills</a>
-                        </li>
-                    </ul>
-                </li>
+              </li>
             </ul>
-        </nav>
+          </nav>
 
         <!-- Page Content  -->
         <div id="content">
             <!-- top navbar -->
             <div class="top-bar container-fluid d-flex align-items-center justify-content-between">
                 <div>
-                    <button type="button" id="sidebarCollapse" class="btn" style="color:#fff">
-                        <i class="fa-solid fa-bars fa-xl"></i>
-                    </button>
+                    <button type="button" id="sidebarCollapse" class="btn" style="color:#fff"><i  class="fa-solid fa-bars fa-xl" onmouseenter="sayWords('sidebar button')" onmouseout="stopTextToSpeech()"></i></button>
                 </div>
                 <div class="navbar navbar-expand">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="m-3"><a href="#"><i class="fa-regular fa-calendar-days fa-xl" style="color:#fff"></i></a></li>
-                        <li class="m-3"><a href="#"><i class="fa-regular fa-bell fa-xl" style="color:#fff"></i></a></li>
-                        <li class="m-3"><a href="#"><i class="fa-solid fa-gear fa-xl" style="color:#fff"></i></a></li>
-                    </ul>
+                    <ul class="navbar-nav mr-auto popover-wrapper" >
+                        <li class="m-3" onclick="togglePopoverreminderes()" ><a href="#" id="reminderButton" onmouseenter="sayWords('reminder button')" onmouseout="stopTextToSpeech()"><i class="fa-regular fa-calendar-days fa-xl" style="color:#fff"></i></a>
+                            <div  id="remindersPopover" class=" popover-content card  "  >
+                                <div class="card-body" >
+                                     <h3 style="color:#850F0F"  class="card-title text-center" onmouseenter="sayWords('reminders')" onmouseout="stopTextToSpeech()">Reminders</h3>
+                                     <p></p> 
+                                     <h5 onmouseenter="sayWords('Date: October 8, 2019')" onmouseout="stopTextToSpeech()"> Date: October 8, 2019</h5>
+                                     <p onmouseenter="sayWords('Bill Reminder: Your electricity bill payment of $150 is due on June 10th, 2019. Please ensure timely payment to avoid any late fees.')" onmouseout="stopTextToSpeech()">Bill Reminder: Your electricity bill payment of $150 is due on June 10th, 2019. Please ensure timely payment to avoid any late fees. </p>
+                                    <P></p>
+                                        <h5 onmouseenter="sayWords('Date: november 15, 2020')" onmouseout="stopTextToSpeech()"> Date: november 15, 2020</h5>
+                                        <p onmouseenter="sayWords('Transfer $200 to George account today.')" onmouseout="stopTextToSpeech()">  Transfer $200 to George account today.</p>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="m-3" onclick="togglePopovernotification()" > <a href="#" id="notificationsButton"  onmouseenter="sayWords('notification button')" onmouseout="stopTextToSpeech()"><i class="fa-regular fa-bell fa-xl" style="color:#fff"></i></a> 
+                            
+                            <div  id="notificationsPopover" class=" popover-content card  " >
+                                <div class="card-body" >
+                                     <h3 style="color:#850F0F" class="card-title text-center"  onmouseenter="sayWords('Notifications')" onmouseout="stopTextToSpeech()">Notifications</h3>
+                                     <p></p> 
+                                        <h5  onmouseenter="sayWords(' Date: May 5, 2018')" onmouseout="stopTextToSpeech()"> Date: May 5, 2018</h5>
+                                     <p  onmouseenter="sayWords('Your contact information has been successfully updated')" onmouseout="stopTextToSpeech()">  Your contact information has been successfully updated</p>
+                                    <p></p>
+                                    <h5 class="card-title"  onmouseenter="sayWords(' Date: May 27, 2023')" onmouseout="stopTextToSpeech()"> Date: May 27, 2023</h5>
+                                    <p onmouseenter="sayWords('A fund transfer of $500 to helen has been successfully completed.')" onmouseout="stopTextToSpeech()" > A fund transfer of $500 to Helen has been successfully completed.</p>
+                            </div>
+                        </div>
+                                 </li>
+                                 
+                                 <li class="m-3" onclick="logout()" > <a href="#" id="notificationsButton"  onmouseenter="sayWords('notification button')" onmouseout="stopTextToSpeech()"><i class="fa-solid fa-right-from-bracket fa-xl" style="color:#fff"></i></a> 
+                            
+                                  <div  id="log" class=" popover-content card  " >
+                                    <a href="../landingPage/landingPage.html" class="mt-3 btn themed-btn-outlined" style="height: 50px;" onmouseenter="sayWords('view transactions button')" onmouseout="stopTextToSpeech()">Logout</a>
+                                  </div>
+                                       </li>            </ul>
                 </div>
             </div>
             <!-- main content************************************************* -->
@@ -213,5 +369,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="../script.js"></script>
     <script src="./scriptClose.js"></script>
+    <script src="../clientHome/clientHome.js"></script>
 </body>
 </html>
