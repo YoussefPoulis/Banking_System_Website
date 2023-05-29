@@ -50,3 +50,28 @@ new Chart("myChart", {
     maintainAspectRatio: false
   }
 });
+
+if (localStorage.getItem('isBlind')) {
+  speechToText();
+}
+
+
+function sayWords(msgText) {
+  if (!localStorage.getItem('isBlind')) {
+      return;
+  }
+  if ('speechSynthesis' in window) {
+      var msg = new SpeechSynthesisUtterance();
+      msg.text = msgText;
+      speechSynthesis.speak(msg);
+  }
+}
+
+function stopTextToSpeech() {
+  if ('speechSynthesis' in window) {
+      
+      if (speechSynthesis.speaking || speechSynthesis.pending) {
+      speechSynthesis.cancel();
+      }
+  }
+}
